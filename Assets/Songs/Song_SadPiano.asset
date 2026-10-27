@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SongData
   _title: Sad Piano
   _clip: {fileID: 8300000, guid: 9391006b1f1d35a45af878bd44e3367d, type: 3}
-  _beatmap: {fileID: 4900000, guid: 153d21094b373e8428cabacd9a860df0, type: 3}
+  _normalBeatmap: {fileID: 4900000, guid: c66909b2117a21a4ab5808436e6fe652, type: 3}
+  _hardBeatmap: {fileID: 4900000, guid: af97a1b74a09bff478d2d089acdcbb3e, type: 3}
+  _expertBeatmap: {fileID: 4900000, guid: 153d21094b373e8428cabacd9a860df0, type: 3}
   _bpm: 120

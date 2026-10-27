@@ -5,4 +5,5 @@ public interface IMusic {
     bool IsSongFinished { get; }
     void PlaySong(AudioClip clip);
     void Stop();
+    void SetVolume(float volume);
 }

@@ -8,6 +8,7 @@ public class GM : MonoBehaviour, IGameStateProvider, IGameFlow {
     [Header("연결 (해당 컴포넌트가 붙은 오브젝트를 넣기)")]
     [SerializeField] private InterfaceReference<IMusic> _music;
     [SerializeField] private InterfaceReference<ISongSelect> _songSelector;
+    [SerializeField] private InterfaceReference<IDifficultySelect> _difficultySelector;
     [SerializeField] private InterfaceReference<ISpawner> _spawner;
     [SerializeField] private InterfaceReference<IScore> _score;
     [SerializeField] private InterfaceReference<ICountdown> _countdown;
@@ -86,7 +87,14 @@ public class GM : MonoBehaviour, IGameStateProvider, IGameFlow {
         _spawner.Value.ClearAll();
         _score.Value.ResetScore();
 
-        List<NoteData> notes = BeatmapParser.Parse(song.Beatmap, song.Bpm);
+        // 난이도: 악보(Normal / Hard / Expert) + 노트 속도 + 줄 수
+        DifficultyData difficulty = _difficultySelector.Value != null ? _difficultySelector.Value.Selected : null;
+        BeatmapLevel level = difficulty != null ? difficulty.Level : BeatmapLevel.Expert;
+        List<NoteData> notes = BeatmapParser.Parse(song.BeatmapFor(level), song.Bpm);
+        if (difficulty != null) {
+            _spawner.Value.SetSpeed(difficulty.NoteSpeed);
+            notes = LaneMapper.ToLanes(notes, difficulty.LaneCount);
+        }
         float travelDistance = _spawner.Value.DistanceTo(_player.position);
         _scheduler = new NoteScheduler(_spawner.Value, notes, travelDistance, _missMargin, _score.Value.Register);
 

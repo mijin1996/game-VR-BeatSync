@@ -14,6 +14,10 @@ public class NoteSpawner : MonoBehaviour, ISpawner {
 
     public float Speed => _noteSpeed;
 
+    public void SetSpeed(float speed) {
+        _noteSpeed = speed;
+    }
+
     public float DistanceTo(Vector3 point) {
         return Vector3.Dot(point - transform.position, transform.forward);
     }

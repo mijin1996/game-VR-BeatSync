@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SongData
   _title: Upbeat Funk
   _clip: {fileID: 8300000, guid: 4e97a0396e1061941ae97b47710a79b5, type: 3}
-  _beatmap: {fileID: 4900000, guid: 975048644de80854d9a726094cf0ecb8, type: 3}
+  _normalBeatmap: {fileID: 4900000, guid: 4834995d48e282145bcc1c0a1a1f4610, type: 3}
+  _hardBeatmap: {fileID: 4900000, guid: 04d18914f439979448ffc814c4b3e9dd, type: 3}
+  _expertBeatmap: {fileID: 4900000, guid: 975048644de80854d9a726094cf0ecb8, type: 3}
   _bpm: 120

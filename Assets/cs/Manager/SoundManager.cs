@@ -13,6 +13,9 @@ public class SoundManager : MonoBehaviour, ISound {
     private AudioSource _bgmSource;
     private AudioSource _sfxSource;
 
+    public float BgmVolume => _bgmVolume;
+    public float SfxVolume => _sfxVolume;
+
     void Awake() {
         _bgmSource = CreateSource(true);
         _sfxSource = CreateSource(false);
@@ -45,6 +48,17 @@ public class SoundManager : MonoBehaviour, ISound {
 
     public void PlaySelect() {
         PlaySfx(_selectSfx);
+    }
+
+    public void SetBgmVolume(float volume) {
+        _bgmVolume = Mathf.Clamp01(volume);
+        if (_bgmSource != null) {
+            _bgmSource.volume = _bgmVolume;
+        }
+    }
+
+    public void SetSfxVolume(float volume) {
+        _sfxVolume = Mathf.Clamp01(volume);
     }
 
     private void PlaySfx(AudioClip clip) {

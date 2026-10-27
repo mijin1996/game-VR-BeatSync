@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SongData
   _title: Club Change Up
   _clip: {fileID: 8300000, guid: be1d5f8b06d06f64aa611f52e0d60f06, type: 3}
-  _beatmap: {fileID: 4900000, guid: b641423dc6e818b43b4e00fcb4ff0ea8, type: 3}
+  _normalBeatmap: {fileID: 4900000, guid: 5c67740b0ad707f4fa74920c808ebba8, type: 3}
+  _hardBeatmap: {fileID: 4900000, guid: ed58377ae0d0458418441e9fdb83d71f, type: 3}
+  _expertBeatmap: {fileID: 4900000, guid: b641423dc6e818b43b4e00fcb4ff0ea8, type: 3}
   _bpm: 120

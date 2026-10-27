@@ -25,6 +25,10 @@ public class MusicPlayer : MonoBehaviour, IMusic {
         _source.PlayScheduled(_songStartDsp);
     }
 
+    public void SetVolume(float volume) {
+        _source.volume = Mathf.Clamp01(volume);
+    }
+
     public void Stop() {
         _isSongMode = false;
         _source.Stop();

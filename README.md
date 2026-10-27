@@ -59,8 +59,22 @@
 ### 1-6. 노래 선택
 - 노래 목록은 **< > 버튼** 으로 넘기며 선택한다. 넘길 때마다 그 노래가 미리듣기로 재생된다. (마지막 곡에서 > 는 첫 곡으로)
 - 노래 목록은 SongSelector 의 **Songs 배열** 에 SongData 를 넣어 관리한다. (노래마다 오브젝트를 만들지 않음)
-- 노래 하나 = **AudioClip + 비트맵(json) + BPM** 묶음 (`Assets/Songs`, Create → BeatSync → Song Data)
-- 현재 3곡: Sad Piano, Club Change Up, Upbeat Funk (모두 Expert, BPM 120)
+- 노래 하나 = **AudioClip + 비트맵(json, Normal / Hard / Expert) + BPM** 묶음 (`Assets/Songs`, Create → BeatSync → Song Data)
+- 현재 3곡: Sad Piano, Club Change Up, Upbeat Funk (모두 Normal / Hard / Expert 악보, BPM 120)
+
+### 1-6-1. 난이도 / 설정
+- 난이도는 노래 선택 아래 **< Normal >** 줄에서 고른다 (Normal → Hard → Expert). 노래 선택과 같은 방식: 선택음 + 이름 Pulse
+- 난이도마다 **Beat Sage 가 만든 그 난이도의 악보**를 쓴다 → 노트 수가 달라도 박자는 노래와 맞음 (노트를 임의로 빼지 않음)
+
+| 난이도 | 악보 | 노트 줄 | 노트 속도 |
+|---|---|---|---|
+| Normal | Normal.json | **2줄** (악보 0·1칸 → 왼쪽, 2·3칸 → 오른쪽, 겹치는 노트는 하나만) | 5 |
+| Hard | Hard.json | 2줄 | 6 |
+| Expert | Expert.json | 2줄 | 8 |
+
+- 값은 `Assets/Difficulty/Normal.asset`, `Hard.asset`, `Expert.asset` 인스펙터에서 조절 (게임 시작 때 NoteSpawner 속도를 덮어씀)
+- 곡(SongData)마다 Normal / Hard / Expert 악보 칸이 있음. 비어 있으면 Expert 악보로 대신함
+- **SETTINGS** 버튼(대기 화면) → 설정 패널: BGM(대기음·미리듣기) / MUSIC(게임 노래) / SFX(효과음) 볼륨, CLOSE. 값은 저장되어 다시 켜도 유지
 
 ### 1-7. 결정할 것 (아직 정해지지 않음)
 - [ ] **레벨**이 무엇인지 / 기준 점수 (지금 200 → 400 → 800 은 새 점수 규칙에서 너무 높음)
@@ -92,6 +106,8 @@
 - [x] 버튼 연결 분리: START / RESTART / HOME (+ 테스트용 스페이스바) → `GameButtons`, GM 은 `IGameFlow` 로 요청만 받음
 - [x] 이름 정리: Spawner → `NoteSpawner` (노트 속도 = NoteSpawner 의 Note Speed)
 - [x] 코드 스타일 K&R 통일, 클래스 위 / 필드 옆 주석 정리
+- [x] 난이도: `DifficultyData`(Normal / Hard / Expert 에셋, 난이도별 Beat Sage 악보 `BeatmapLevel`), `DifficultySelector`, `LaneMapper`(4줄 → 2줄). 노래·난이도 < > 공통 부모 `ListSelector`, 공통 선택 피드백 `SelectFeedback`
+- [x] 설정 패널: `SettingsView` (볼륨 3개 + 저장), `ISound` / `IMusic` 에 볼륨 조절 추가
 - [x] 폴더 정리: `Manager` 폴더 (GM, GameState, GameStateActivator, InterfaceReference, SoundManager, SoundController, EffectManager), 안 쓰는 `SongToggle.cs` 삭제
 - [x] 사운드: `SoundManager` : `ISound` (대기음·미리듣기 BGM + 효과음), `SoundController` (상태에 따라 대기음 / 미리듣기 / 정지). `MusicPlayer` 는 게임 노래(타이밍)만 담당
 - [x] 이펙트: `EffectManager` : `IEffect` (버튼 클릭 링 + 눌림, 깜빡임, 커졌다 작아지기 2번)
