@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f1ed9609c3e1714081c2d271599dd3b, type: 3}
+  m_Name: Song_Echoes of Lumen
+  m_EditorClassIdentifier: Assembly-CSharp::SongData
+  _title: Echoes of Lumen
+  _clip: {fileID: 8300000, guid: 71746947945a9e74f86cf1e7a880de52, type: 3}
+  _normalBeatmap: {fileID: 4900000, guid: c66909b2117a21a4ab5808436e6fe652, type: 3}
+  _hardBeatmap: {fileID: 4900000, guid: af97a1b74a09bff478d2d089acdcbb3e, type: 3}
+  _expertBeatmap: {fileID: 4900000, guid: 153d21094b373e8428cabacd9a860df0, type: 3}
+  _bpm: 120

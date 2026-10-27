@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,6 +23,23 @@ public class EffectManager : MonoBehaviour, IEffect {
     [SerializeField] private float _pulseScale = 1.3f;
     [SerializeField] private float _pulseHalfDuration = 0.08f;
 
+    [Header("노트 벨 때")]
+    [SerializeField] private GameObject _hitEffectPrefab;
+    [SerializeField] private float _hitEffectLifetime = 2f;
+
+    [Header("카운트다운 GO!")]
+    [SerializeField] private GameObject _goEffectPrefab;
+    [SerializeField] private float _goEffectLifetime = 2f;
+
+    [Header("판정 문구")]
+    [SerializeField] private float _gradeSize = 3f;
+    [SerializeField] private float _gradeDuration = 0.6f;
+    [SerializeField] private float _gradeRise = 0.3f;
+    [SerializeField] private Color _marvelousColor = new Color(1f, 0.85f, 0.25f);
+    [SerializeField] private Color _perfectColor = new Color(0.45f, 0.9f, 1f);
+    [SerializeField] private Color _greatColor = new Color(0.5f, 1f, 0.5f);
+    [SerializeField] private Color _missColor = new Color(1f, 0.35f, 0.35f);
+
     private readonly Dictionary<Transform, Coroutine> _scaleRoutines = new Dictionary<Transform, Coroutine>();
     private readonly Dictionary<Transform, Vector3> _baseScales = new Dictionary<Transform, Vector3>();
     private readonly Dictionary<Graphic, Coroutine> _blinkRoutines = new Dictionary<Graphic, Coroutine>();
@@ -33,6 +51,29 @@ public class EffectManager : MonoBehaviour, IEffect {
         }
         SpawnRing(target);
         StartScale(target, _punchScale, 1, _punchDuration * 0.5f);
+    }
+
+    public void PlayHit(Vector3 position) {
+        if (_hitEffectPrefab == null) {
+            return;
+        }
+        GameObject effect = Instantiate(_hitEffectPrefab, position, Quaternion.identity);
+        Destroy(effect, _hitEffectLifetime);
+    }
+
+    public void PlayGo(Transform at) {
+        if (_goEffectPrefab == null || at == null) {
+            return;
+        }
+        // GO! 글자 위치에, 글자와 같은 방향(플레이어 쪽)으로 생성
+        GameObject effect = Instantiate(_goEffectPrefab, at.position, at.rotation);
+        Destroy(effect, _goEffectLifetime);
+    }
+
+    public void ShowGrade(HitGrade grade, Vector3 position) {
+        GameObject popup = new GameObject("GradePopup", typeof(TextMeshPro));
+        popup.transform.position = position;
+        popup.AddComponent<GradePopup>().Init(WordOf(grade), ColorOf(grade), _gradeSize, _gradeDuration, _gradeRise);
     }
 
     public void Pulse(Transform target) {
@@ -151,5 +192,23 @@ public class EffectManager : MonoBehaviour, IEffect {
             yield return null;
         }
         Destroy(ring.gameObject);
+    }
+
+    private static string WordOf(HitGrade grade) {
+        switch (grade) {
+            case HitGrade.Marvelous: return "MARVELOUS";
+            case HitGrade.Perfect: return "PERFECT";
+            case HitGrade.Great: return "GREAT";
+            default: return "MISS";
+        }
+    }
+
+    private Color ColorOf(HitGrade grade) {
+        switch (grade) {
+            case HitGrade.Marvelous: return _marvelousColor;
+            case HitGrade.Perfect: return _perfectColor;
+            case HitGrade.Great: return _greatColor;
+            default: return _missColor;
+        }
     }
 }

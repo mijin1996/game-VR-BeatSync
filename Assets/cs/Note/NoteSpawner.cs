@@ -9,6 +9,7 @@ public class NoteSpawner : MonoBehaviour, ISpawner {
     [SerializeField, FormerlySerializedAs("colSpacing")] private float _colSpacing = 0.6f;
     [SerializeField, FormerlySerializedAs("rowSpacing")] private float _rowSpacing = 0.5f;
     [SerializeField, FormerlySerializedAs("bottomY")] private float _bottomY = -0.39f;
+    [SerializeField] private InterfaceReference<IEffect> _effect;
 
     private readonly List<Note> _aliveNotes = new List<Note>();
 
@@ -38,7 +39,19 @@ public class NoteSpawner : MonoBehaviour, ISpawner {
         Note note = obj.GetComponent<Note>();
         note.Init(_noteSpeed, missDistance, advance);
         _aliveNotes.Add(note);
-        note.Judged += result => _aliveNotes.Remove(note);
+        note.Judged += result => {
+            _aliveNotes.Remove(note);
+            // 칼에 베인 노트(Hit) 자리에 이펙트
+            if (result == NoteResult.Hit && _effect.Value != null) {
+                _effect.Value.PlayHit(note.transform.position);
+            }
+        };
+        note.Graded += grade => {
+            // 판정 문구 (MARVELOUS / PERFECT / GREAT / MISS) 를 노트 자리에
+            if (_effect.Value != null) {
+                _effect.Value.ShowGrade(grade, note.transform.position);
+            }
+        };
         return note;
     }
 

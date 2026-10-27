@@ -1,3 +1,3 @@
 public interface ICuttable {
-    void Cut();
+    void Cut(HitGrade grade);
 }

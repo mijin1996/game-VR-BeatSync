@@ -45,6 +45,32 @@
 | 8 | Miss | 0 | -5 | 4 | 4 |
 | 9 | Miss | 0 | -5 → 0 | **0** | 5 → **GAME OVER** |
 
-## 5. 레벨 (아직 정리 필요)
+## 5. 칼 위치 판정 (MARVELOUS / PERFECT / GREAT)
+
+> 칼(Saber)의 길이는 **2m** (손 0m ~ 칼 끝 2m). 노트가 칼의 **어느 위치에 맞았는지**로 판정 문구를 정한다.
+> 코드: `Saber.cs`(칼 전체 레이) + `HitZone.cs`(구간 판정) → `Note.cs` → `NoteSpawner` → `EffectManager.ShowGrade` → `GradePopup.cs`(문구 표시)
+
+```
+손(0m) ━━━━━━━━━ 1m ━━━━━━━━━ 1.2~1.5 ━━━━━━━━━ 2m(끝)
+│◀─── MISS ───▶│◀─ GREAT ─▶│MARVELOUS│◀── PERFECT ──▶│
+```
+
+| 맞은 위치 (손에서 거리) | 판정 | 문구 |
+|---|---|---|
+| 0 ~ 1.0m (벨 수 없는 곳) | Miss | **MISS** (닿은 순간 바로) |
+| 1.0 ~ 1.2m | Hit | **GREAT** |
+| 1.2 ~ 1.5m | Hit | **MARVELOUS** |
+| 1.5 ~ 2.0m (칼 끝 쪽) | Hit | **PERFECT** |
+| 못 맞히고 지나감 | Miss | **MISS** |
+
+- 문구는 노트가 있던 자리에 잠깐 떠올랐다가 사라진다.
+- 구간 숫자(1.0 / 1.2 / 1.5 / 2.0m)는 **Saber-L / Saber-R → Hit Zone** 인스펙터에서 조절
+- 문구 색 · 크기 · 시간은 **EffectManager → 판정 문구** 에서 조절
+- 칼을 거의 움직이지 않고 대고만 있으면 판정하지 않음 (Saber 의 Min Swing Speed, 기본 0.5m/s)
+- 결정할 것
+  - [x] 판정마다 점수: 같음 (MARVELOUS / PERFECT / GREAT 모두 Hit — 첫 Hit +5, 연속 Hit +7)
+  - [x] 벨 수 있는 곳에 맞았지만 화살표 반대로 벤 경우: 닿은 순간 바로 MISS
+
+## 6. 레벨 (아직 정리 필요)
 - 지금: SCORE 200 → 400 → 800 ... 에 닿을 때마다 LEVEL +1 (점수가 내려가도 레벨은 유지)
 - 새 점수 규칙(+5 / +7)에서는 200점까지 약 28번 연속 Hit 가 필요 → 기준을 다시 정할 것
