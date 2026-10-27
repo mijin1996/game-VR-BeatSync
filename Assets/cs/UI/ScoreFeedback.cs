@@ -4,6 +4,7 @@ using UnityEngine;
 public class ScoreFeedback : MonoBehaviour {
     [SerializeField] private InterfaceReference<IScore> _score;
     [SerializeField] private InterfaceReference<IEffect> _effect;
+    [SerializeField] private InterfaceReference<ISound> _sound;
     [SerializeField] private TMP_Text _scoreText;
     [SerializeField] private TMP_Text _comboText;
     [SerializeField] private TMP_Text _missText;
@@ -33,6 +34,10 @@ public class ScoreFeedback : MonoBehaviour {
             _effect.Value.Blink(_scoreText);
         }
         if (score.Combo > _lastCombo) {
+            // COMBO 가 오른 것 = 노트를 벤 것(Hit) → 베는 소리
+            if (_sound.Value != null) {
+                _sound.Value.PlayCut();
+            }
             _effect.Value.Pulse(_comboText != null ? _comboText.transform : null);
         }
         if (score.Miss > _lastMiss) {

@@ -8,6 +8,7 @@ public interface ISound {
     void StopBgm();
     void PlayClick();
     void PlaySelect();
+    void PlayCut();
     void SetBgmVolume(float volume);
     void SetSfxVolume(float volume);
 }

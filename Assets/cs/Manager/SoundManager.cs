@@ -8,6 +8,7 @@ public class SoundManager : MonoBehaviour, ISound {
     [Header("효과음")]
     [SerializeField] private AudioClip _clickSfx;
     [SerializeField] private AudioClip _selectSfx;
+    [SerializeField] private AudioClip _cutSfx;
     [SerializeField, Range(0f, 1f)] private float _sfxVolume = 1f;
 
     private AudioSource _bgmSource;
@@ -48,6 +49,10 @@ public class SoundManager : MonoBehaviour, ISound {
 
     public void PlaySelect() {
         PlaySfx(_selectSfx);
+    }
+
+    public void PlayCut() {
+        PlaySfx(_cutSfx);
     }
 
     public void SetBgmVolume(float volume) {

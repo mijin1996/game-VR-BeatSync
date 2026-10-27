@@ -107,6 +107,8 @@
 - [x] 이름 정리: Spawner → `NoteSpawner` (노트 속도 = NoteSpawner 의 Note Speed)
 - [x] 코드 스타일 K&R 통일, 클래스 위 / 필드 옆 주석 정리
 - [x] 난이도: `DifficultyData`(Normal / Hard / Expert 에셋, 난이도별 Beat Sage 악보 `BeatmapLevel`), `DifficultySelector`, `LaneMapper`(4줄 → 2줄). 노래·난이도 < > 공통 부모 `ListSelector`, 공통 선택 피드백 `SelectFeedback`
+- [x] 노트 베는 소리: Hit(COMBO 증가) 때 `Assets/Sounds/NoteCut.wav` 재생 (`ScoreFeedback` → `ISound.PlayCut`)
+- [x] 칼 트레일: Saber-L / Saber-R 끝에 `Trail` 오브젝트 + **Trail Renderer** (칼 색, 0.18초, 끝으로 갈수록 가늘고 투명)
 - [x] 설정 패널: `SettingsView` (볼륨 3개 + 저장), `ISound` / `IMusic` 에 볼륨 조절 추가
 - [x] 폴더 정리: `Manager` 폴더 (GM, GameState, GameStateActivator, InterfaceReference, SoundManager, SoundController, EffectManager), 안 쓰는 `SongToggle.cs` 삭제
 - [x] 사운드: `SoundManager` : `ISound` (대기음·미리듣기 BGM + 효과음), `SoundController` (상태에 따라 대기음 / 미리듣기 / 정지). `MusicPlayer` 는 게임 노래(타이밍)만 담당
