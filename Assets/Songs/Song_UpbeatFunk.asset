@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f1ed9609c3e1714081c2d271599dd3b, type: 3}
+  m_Name: Song_UpbeatFunk
+  m_EditorClassIdentifier: Assembly-CSharp::SongData
+  _title: Upbeat Funk
+  _clip: {fileID: 8300000, guid: 4e97a0396e1061941ae97b47710a79b5, type: 3}
+  _beatmap: {fileID: 4900000, guid: 975048644de80854d9a726094cf0ecb8, type: 3}
+  _bpm: 120
