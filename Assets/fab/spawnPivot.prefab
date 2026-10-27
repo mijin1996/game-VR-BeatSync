@@ -71,7 +71,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9133759130815171398}
-  - component: {fileID: 5262108571852550874}
   m_Layer: 0
   m_Name: spawnPivot
   m_TagString: Untagged
@@ -98,29 +97,6 @@ Transform:
   - {fileID: 1538314092768217135}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &5262108571852550874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5642423495504056989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8bc99aa24f4f3c4a9a1dfb1f85a4510, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Spawner
-  note:
-  - {fileID: 8709643902044807899, guid: 84ae5183de904ea4bb67e9e5cfc8cfcc, type: 3}
-  - {fileID: 8709643902044807899, guid: 430b44eec8e0c7f408c398bbdb19ca7b, type: 3}
-  - {fileID: 8709643902044807899, guid: 8bd85c8d546967b45be79d67c9e68ffb, type: 3}
-  - {fileID: 8709643902044807899, guid: 6cdb2084980dc114eb0772f31ccf17ec, type: 3}
-  spawnPoint:
-  - {fileID: 7411923820602115730}
-  - {fileID: 2496696613532550343}
-  - {fileID: 8328277619824996247}
-  - {fileID: 1538314092768217135}
-  beat: 1
 --- !u!1 &7134537416609992837
 GameObject:
   m_ObjectHideFlags: 0
