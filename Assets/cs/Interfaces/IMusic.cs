@@ -1,9 +1,8 @@
 using UnityEngine;
 
-public interface IMusicPlayer {
+public interface IMusic {
     float SongTime { get; }
     bool IsSongFinished { get; }
-    void PlayLoop(AudioClip clip);
     void PlaySong(AudioClip clip);
     void Stop();
 }

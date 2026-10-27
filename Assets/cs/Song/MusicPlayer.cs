@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
-public class MusicPlayer : MonoBehaviour, IMusicPlayer {
+public class MusicPlayer : MonoBehaviour, IMusic {
     [SerializeField] private float _scheduleDelay = 0.1f;
 
     private AudioSource _source;
@@ -14,21 +14,6 @@ public class MusicPlayer : MonoBehaviour, IMusicPlayer {
     void Awake() {
         _source = GetComponent<AudioSource>();
         _source.playOnAwake = false;
-    }
-
-    public void PlayLoop(AudioClip clip) {
-        if (clip == null) {
-            Stop();
-            return;
-        }
-        if (!_isSongMode && _source.isPlaying && _source.clip == clip) {
-            return;   // 이미 같은 곡 반복 재생 중
-        }
-        _isSongMode = false;
-        _source.Stop();
-        _source.clip = clip;
-        _source.loop = true;
-        _source.Play();
     }
 
     public void PlaySong(AudioClip clip) {

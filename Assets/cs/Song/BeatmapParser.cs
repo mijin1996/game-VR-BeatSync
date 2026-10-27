@@ -6,7 +6,6 @@ public static class BeatmapParser {
     public static List<NoteData> Parse(TextAsset json, float bpm) {
         List<NoteData> result = new List<NoteData>();
         if (json == null) {
-            Debug.LogError("[BeatmapParser] 비트맵(TextAsset)이 비어 있습니다");
             return result;
         }
 

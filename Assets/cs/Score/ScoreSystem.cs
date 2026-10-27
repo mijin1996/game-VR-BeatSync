@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class ScoreSystem : MonoBehaviour, IScoreSystem {
+public class ScoreSystem : MonoBehaviour, IScore {
     [Header("점수 규칙 (GameRule.md)")]
     [SerializeField] private int _firstHitPoints = 5;
     [SerializeField] private int _comboHitPoints = 7;

@@ -1,6 +1,6 @@
 using System;
 
-public interface IScoreSystem {
+public interface IScore {
     int Score { get; }
     int Combo { get; }
     int Miss { get; }

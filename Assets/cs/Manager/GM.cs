@@ -6,15 +6,12 @@ using UnityEngine.Serialization;
 
 public class GM : MonoBehaviour, IGameStateProvider, IGameFlow {
     [Header("연결 (해당 컴포넌트가 붙은 오브젝트를 넣기)")]
-    [SerializeField] private InterfaceReference<IMusicPlayer> _music;
-    [SerializeField] private InterfaceReference<ISongSelector> _songSelector;
+    [SerializeField] private InterfaceReference<IMusic> _music;
+    [SerializeField] private InterfaceReference<ISongSelect> _songSelector;
     [SerializeField] private InterfaceReference<ISpawner> _spawner;
-    [SerializeField] private InterfaceReference<IScoreSystem> _score;
-    [SerializeField] private InterfaceReference<ICountdownView> _countdown;
+    [SerializeField] private InterfaceReference<IScore> _score;
+    [SerializeField] private InterfaceReference<ICountdown> _countdown;
     [SerializeField, FormerlySerializedAs("player")] private Transform _player;
-
-    [Header("대기")]
-    [SerializeField] private AudioClip _waitingBgm;
 
     [Header("타이밍")]
     [SerializeField] private float _timingOffset = 0f;
@@ -32,18 +29,12 @@ public class GM : MonoBehaviour, IGameStateProvider, IGameFlow {
     private float SongTime => _music.Value.SongTime + _timingOffset;
 
     void OnEnable() {
-        if (_songSelector.Value != null) {
-            _songSelector.Value.SongSelected += OnSongSelected;
-        }
         if (_score.Value != null) {
             _score.Value.GameOver += OnGameOver;
         }
     }
 
     void OnDisable() {
-        if (_songSelector.Value != null) {
-            _songSelector.Value.SongSelected -= OnSongSelected;
-        }
         if (_score.Value != null) {
             _score.Value.GameOver -= OnGameOver;
         }
@@ -70,7 +61,6 @@ public class GM : MonoBehaviour, IGameStateProvider, IGameFlow {
         }
         SongData song = _songSelector.Value.Selected;
         if (song == null) {
-            Debug.LogWarning("[GM] 선택된 노래가 없습니다");
             return;
         }
         StartCoroutine(PlayRoutine(song));
@@ -87,7 +77,7 @@ public class GM : MonoBehaviour, IGameStateProvider, IGameFlow {
     public void GoHome() {
         StopAllCoroutines();
         _spawner.Value.ClearAll();
-        _music.Value.PlayLoop(_waitingBgm);
+        _music.Value.Stop();
         SetState(GameState.Waiting);
     }
 
@@ -107,12 +97,6 @@ public class GM : MonoBehaviour, IGameStateProvider, IGameFlow {
 
         _scheduler.SkipUntil(SongTime);   // 카운트다운 동안 지나간 노트는 건너뜀
         SetState(GameState.Playing);
-    }
-
-    private void OnSongSelected(SongData song) {
-        if (State == GameState.Waiting) {
-            _music.Value.PlayLoop(song.Clip);   // 미리듣기
-        }
     }
 
     private void OnGameOver() {
@@ -142,7 +126,6 @@ public class GM : MonoBehaviour, IGameStateProvider, IGameFlow {
 
     private void SetState(GameState state) {
         State = state;
-        Debug.Log("[GM] 상태: " + state);
         StateChanged?.Invoke(state);
     }
 }

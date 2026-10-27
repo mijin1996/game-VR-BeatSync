@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class SongSelector : MonoBehaviour, ISongSelector {
+public class SongSelector : MonoBehaviour, ISongSelect {
     [SerializeField] private SongData[] _songs;
     [SerializeField] private TMP_Text _titleText;
     [SerializeField] private Button _prevButton;

@@ -2,12 +2,12 @@ using TMPro;
 using UnityEngine;
 
 public class GameOverView : MonoBehaviour {
-    [SerializeField] private InterfaceReference<IScoreSystem> _score;
+    [SerializeField] private InterfaceReference<IScore> _score;
     [SerializeField] private TMP_Text _scoreText;
     [SerializeField] private TMP_Text _levelText;
 
     void OnEnable() {
-        IScoreSystem score = _score.Value;
+        IScore score = _score.Value;
         if (score == null) {
             return;
         }

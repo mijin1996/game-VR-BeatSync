@@ -1,6 +1,6 @@
 using System;
 
-public interface ISongSelector {
+public interface ISongSelect {
     SongData Selected { get; }
     event Action<SongData> SongSelected;
 }

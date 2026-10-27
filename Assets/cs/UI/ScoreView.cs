@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 
 public class ScoreView : MonoBehaviour {
-    [SerializeField] private InterfaceReference<IScoreSystem> _score;
+    [SerializeField] private InterfaceReference<IScore> _score;
     [SerializeField] private TMP_Text _comboText;
     [SerializeField] private TMP_Text _missText;
     [SerializeField] private TMP_Text _scoreText;
@@ -23,7 +23,7 @@ public class ScoreView : MonoBehaviour {
     }
 
     private void Refresh() {
-        IScoreSystem score = _score.Value;
+        IScore score = _score.Value;
         SetText(_comboText, "COMBO: " + score.Combo);
         SetText(_missText, "MISS: " + score.Miss);
         SetText(_scoreText, "SCORE: " + score.Score);

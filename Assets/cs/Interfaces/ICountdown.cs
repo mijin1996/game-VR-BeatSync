@@ -1,5 +1,5 @@
 using System.Collections;
 
-public interface ICountdownView {
+public interface ICountdown {
     IEnumerator Run();
 }

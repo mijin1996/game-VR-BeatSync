@@ -92,6 +92,10 @@
 - [x] 버튼 연결 분리: START / RESTART / HOME (+ 테스트용 스페이스바) → `GameButtons`, GM 은 `IGameFlow` 로 요청만 받음
 - [x] 이름 정리: Spawner → `NoteSpawner` (노트 속도 = NoteSpawner 의 Note Speed)
 - [x] 코드 스타일 K&R 통일, 클래스 위 / 필드 옆 주석 정리
+- [x] 폴더 정리: `Manager` 폴더 (GM, GameState, GameStateActivator, InterfaceReference, SoundManager, SoundController, EffectManager), 안 쓰는 `SongToggle.cs` 삭제
+- [x] 사운드: `SoundManager` : `ISound` (대기음·미리듣기 BGM + 효과음), `SoundController` (상태에 따라 대기음 / 미리듣기 / 정지). `MusicPlayer` 는 게임 노래(타이밍)만 담당
+- [x] 이펙트: `EffectManager` : `IEffect` (버튼 클릭 링 + 눌림, 깜빡임, 커졌다 작아지기 2번)
+- [x] 피드백 연결: `ButtonFeedback` (시작·< >·RESTART·HOME 클릭음 + 이펙트), `SongSelectFeedback` (노래 선택음 + 제목 이펙트), `ScoreFeedback` (SCORE 오르면 깜빡, COMBO·MISS 늘면 커졌다 작아지기 2번)
 
 ### 진행 중 / 문제
 - [ ] 노트가 한꺼번에 몰려 보임 → NoteSpawner 의 Note Speed 조절 (지금 2, 6~8 추천) 또는 비트맵 난이도를 Normal / Hard 로
@@ -104,8 +108,8 @@
 - [ ] 결과 패널 (노래 끝)
 - [ ] 장애물(Obstacles) 생성
 - [ ] (선택) 폭탄(Bombs) — `ICuttable` 로 추가 가능
-- [ ] (선택) 효과음 — 배경음악과 분리된 `SfxPlayer`
-- [ ] (정리) 안 쓰는 `SongToggle.cs` 삭제 여부
+- [ ] 대기음 파일 정하기 → SoundManager 의 Waiting Bgm 칸 (지금 비어 있어서 대기 화면은 무음)
+- [ ] (선택) 노트 벨 때 / Miss 때 효과음
 
 ### 참고 (설정값)
 - VR 레이 거리(Curve Interaction Caster 의 Cast Distance) 15m — Canvas 가 카메라 10m 앞(LazyFollow)이라 양옆 버튼까지 닿게 하려고 늘림

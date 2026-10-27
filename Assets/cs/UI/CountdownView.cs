@@ -2,7 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-public class CountdownView : MonoBehaviour, ICountdownView {
+public class CountdownView : MonoBehaviour, ICountdown {
     [SerializeField] private TMP_Text _text;
     [SerializeField] private string[] _words = { "READY", "GO!" };
     [SerializeField] private float _interval = 1f;
