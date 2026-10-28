@@ -38,3 +38,11 @@ crashlytics-build.properties
 .DS_Store
 Thumbs.db
 _backup*/
+
+# Build outputs
+/webGL/
+/[Bb]uild*/
+
+# 사용하지 않는 영상
+/Assets/Video/video.mp4
+/Assets/Video/video.mp4.meta
