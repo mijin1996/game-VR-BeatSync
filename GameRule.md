@@ -25,10 +25,32 @@
 | 기준 | 값 |
 |---|---|
 | 시작 SCORE | **0** |
-| GAME OVER | **Miss 로 SCORE 가 0점이 되면** → 노래를 멈추고 GAME OVER 패널 (SCORE, LEVEL, RESTART, HOME) |
+| GAME OVER | 아래 **GAME OVER 패널 활성화 기준** 중 하나라도 먼저 충족되면 |
 
-- 시작 직후 첫 노트를 놓치면 0점 → 바로 GAME OVER.
-- Hit 로 점수를 쌓아 두면 그만큼 Miss 를 버틸 수 있다.
+### GAME OVER 패널 활성화 기준
+
+| 번호 | 조건 | 확인 시점 |
+|---|---|---|
+| 1 | **노래가 끝남** (곡 하나 재생 완료) | 곡 재생이 끝난 순간, SCORE · MISS 와 상관없이 |
+| 2 | **SCORE 가 0점이 됨** | Miss 판정 직후 |
+| 3 | **Miss 가 연속 3번** | Miss 판정 직후, 연속 Miss 가 3번이 되는 순간 (Hit 하면 연속 횟수는 0으로 초기화) |
+
+- Miss 판정에는 지나간 노트, 칼의 0 ~ 1.0m 구간에 맞은 노트, 화살표 반대로 벤 노트가 모두 포함된다.
+- 게임 시작 때의 0점은 조건 2 에 해당하지 않는다. Miss 판정 후 SCORE 가 0점일 때만 해당한다.
+- 시작 직후 Hit 없이 첫 노트를 놓치면 0점이므로 조건 2 로 바로 GAME OVER.
+
+### GAME OVER 패널 공통 동작
+
+- 노트 생성을 멈추고 남은 노트를 모두 지운다.
+- 노래가 재생 중이면 멈춘다.
+- 어떤 조건으로 끝나도 **같은 패널**에 SCORE, LEVEL, RESTART, HOME 을 표시한다.
+- SCORE 는 0으로 초기화된 값이 아니라 **이번 판의 최고 점수**를 표시한다.
+- RESTART 또는 새 곡을 시작하면 SCORE, MISS, 연속 Miss 를 0부터 다시 센다.
+
+### 결정된 사항
+
+- [x] 조건 3: 연속 3번 (GM 오브젝트의 ScoreSystem → Game Over Consecutive Miss 에서 조절)
+- [x] 패널 SCORE: 이번 판 최고 점수 (BestScore)
 
 ## 4. 진행 예시
 
@@ -42,8 +64,7 @@
 | 5 | Hit | 1 | +5 (다시 첫 Hit) | 19 | 1 |
 | 6 | Miss | 0 | -5 | 14 | 2 |
 | 7 | Miss | 0 | -5 | 9 | 3 |
-| 8 | Miss | 0 | -5 | 4 | 4 |
-| 9 | Miss | 0 | -5 → 0 | **0** | 5 → **GAME OVER** |
+| 8 | Miss | 0 | -5 | 4 | 4 → **GAME OVER** (6 ~ 8번 연속 Miss 3번) |
 
 ## 5. 칼 위치 판정 (MARVELOUS / PERFECT / GREAT)
 

@@ -11,7 +11,7 @@ public class GameOverView : MonoBehaviour {
         if (score == null) {
             return;
         }
-        SetText(_scoreText, "SCORE: " + score.Score);
+        SetText(_scoreText, "SCORE: " + score.BestScore);
         SetText(_levelText, "LEVEL: " + score.Level);
     }
 

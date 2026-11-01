@@ -4918,9 +4918,9 @@ MonoBehaviour:
   _pulseCount: 2
   _pulseScale: 0.9
   _pulseHalfDuration: 0.08
-  _hitEffectPrefab: {fileID: 6855314210357232287, guid: 7c2a9b83b809a0848915fabd9596b68b, type: 3}
+  _hitEffectPrefab: {fileID: 8791802859087666345, guid: ae07f2a45f14a82428409cfe410e6002, type: 3}
   _hitEffectLifetime: 2
-  _goEffectPrefab: {fileID: 2353600328335836179, guid: ceec7516237b4104b94300043ca39784, type: 3}
+  _goEffectPrefab: {fileID: 4772634663576830964, guid: e1385af346f4e624eb313ec1ea4fcd7e, type: 3}
   _goEffectLifetime: 2
   _gradeSize: 3
   _gradeDuration: 0.6

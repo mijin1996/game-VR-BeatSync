@@ -50,10 +50,13 @@ public class GM : MonoBehaviour, IGameStateProvider, IGameFlow {
             return;
         }
 
-        _scheduler.Tick(SongTime);
-        if (_scheduler.IsDone && _music.Value.IsSongFinished) {
-            Finish(GameState.Result);
+        // 노래가 끝나면 남은 노트와 상관없이 GAME OVER 패널로
+        if (_music.Value.IsSongFinished) {
+            Finish(GameState.GameOver);
+            return;
         }
+
+        _scheduler.Tick(SongTime);
     }
 
     public void StartGame() {
