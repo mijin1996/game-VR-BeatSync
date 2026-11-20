@@ -1,0 +1,10 @@
+﻿Song,Difficulty,NoteSpeed,RawNotes,Notes_2Lane,FirstNote(s),LastNote(s),NotesPerSec,DirectionChangeRate,MaxScore(AllHit),Level_AtMax,NotesTo200(Lv2),NotesSkipped_Min(Countdown 2s)
+Club Change Up,normal,3,159,158,1.03,61.26,2.62,59%,1104,4,29,4
+Club Change Up,hard,5,192,192,1.03,61.26,3.19,77%,1342,4,29,2
+Club Change Up,expert,8,371,359,1.03,61.26,5.96,62%,2511,5,29,4
+Echoes of Lumen,normal,3,161,160,4.32,164.44,1,79%,1118,4,29,0
+Echoes of Lumen,hard,5,217,216,1.13,160.93,1.35,80%,1510,4,29,2
+Echoes of Lumen,expert,8,456,453,1.13,164.44,2.77,70%,3169,5,29,3
+Upbeat Funk,normal,3,156,144,2.05,63.3,2.35,75%,1006,4,29,0
+Upbeat Funk,hard,5,182,181,1.05,63.8,2.88,70%,1265,4,29,1
+Upbeat Funk,expert,8,253,248,1.05,63.8,3.95,60%,1734,5,29,3
