@@ -1,0 +1,163 @@
+{
+  "beatmaps": [
+    {
+      "song": "Club Change Up",
+      "difficulty": "normal",
+      "noteSpeed": 3,
+      "rawNotes": 159,
+      "notes2Lane": 158,
+      "firstNoteSec": 1.03,
+      "lastNoteSec": 61.26,
+      "derived": {
+        "notesPerSec": 2.62,
+        "directionChangeRate": 0.59,
+        "maxScoreAllHit": 1104,
+        "levelAtMax": 4,
+        "notesTo200": 29,
+        "notesSkippedMinCountdown": 4
+      }
+    },
+    {
+      "song": "Club Change Up",
+      "difficulty": "hard",
+      "noteSpeed": 5,
+      "rawNotes": 192,
+      "notes2Lane": 192,
+      "firstNoteSec": 1.03,
+      "lastNoteSec": 61.26,
+      "derived": {
+        "notesPerSec": 3.19,
+        "directionChangeRate": 0.77,
+        "maxScoreAllHit": 1342,
+        "levelAtMax": 4,
+        "notesTo200": 29,
+        "notesSkippedMinCountdown": 2
+      }
+    },
+    {
+      "song": "Club Change Up",
+      "difficulty": "expert",
+      "noteSpeed": 8,
+      "rawNotes": 371,
+      "notes2Lane": 359,
+      "firstNoteSec": 1.03,
+      "lastNoteSec": 61.26,
+      "derived": {
+        "notesPerSec": 5.96,
+        "directionChangeRate": 0.62,
+        "maxScoreAllHit": 2511,
+        "levelAtMax": 5,
+        "notesTo200": 29,
+        "notesSkippedMinCountdown": 4
+      }
+    },
+    {
+      "song": "Echoes of Lumen",
+      "difficulty": "normal",
+      "noteSpeed": 3,
+      "rawNotes": 161,
+      "notes2Lane": 160,
+      "firstNoteSec": 4.32,
+      "lastNoteSec": 164.44,
+      "derived": {
+        "notesPerSec": 1,
+        "directionChangeRate": 0.79,
+        "maxScoreAllHit": 1118,
+        "levelAtMax": 4,
+        "notesTo200": 29,
+        "notesSkippedMinCountdown": 0
+      }
+    },
+    {
+      "song": "Echoes of Lumen",
+      "difficulty": "hard",
+      "noteSpeed": 5,
+      "rawNotes": 217,
+      "notes2Lane": 216,
+      "firstNoteSec": 1.13,
+      "lastNoteSec": 160.93,
+      "derived": {
+        "notesPerSec": 1.35,
+        "directionChangeRate": 0.8,
+        "maxScoreAllHit": 1510,
+        "levelAtMax": 4,
+        "notesTo200": 29,
+        "notesSkippedMinCountdown": 2
+      }
+    },
+    {
+      "song": "Echoes of Lumen",
+      "difficulty": "expert",
+      "noteSpeed": 8,
+      "rawNotes": 456,
+      "notes2Lane": 453,
+      "firstNoteSec": 1.13,
+      "lastNoteSec": 164.44,
+      "derived": {
+        "notesPerSec": 2.77,
+        "directionChangeRate": 0.7,
+        "maxScoreAllHit": 3169,
+        "levelAtMax": 5,
+        "notesTo200": 29,
+        "notesSkippedMinCountdown": 3
+      }
+    },
+    {
+      "song": "Upbeat Funk",
+      "difficulty": "normal",
+      "noteSpeed": 3,
+      "rawNotes": 156,
+      "notes2Lane": 144,
+      "firstNoteSec": 2.05,
+      "lastNoteSec": 63.3,
+      "derived": {
+        "notesPerSec": 2.35,
+        "directionChangeRate": 0.75,
+        "maxScoreAllHit": 1006,
+        "levelAtMax": 4,
+        "notesTo200": 29,
+        "notesSkippedMinCountdown": 0
+      }
+    },
+    {
+      "song": "Upbeat Funk",
+      "difficulty": "hard",
+      "noteSpeed": 5,
+      "rawNotes": 182,
+      "notes2Lane": 181,
+      "firstNoteSec": 1.05,
+      "lastNoteSec": 63.8,
+      "derived": {
+        "notesPerSec": 2.88,
+        "directionChangeRate": 0.7,
+        "maxScoreAllHit": 1265,
+        "levelAtMax": 4,
+        "notesTo200": 29,
+        "notesSkippedMinCountdown": 1
+      }
+    },
+    {
+      "song": "Upbeat Funk",
+      "difficulty": "expert",
+      "noteSpeed": 8,
+      "rawNotes": 253,
+      "notes2Lane": 248,
+      "firstNoteSec": 1.05,
+      "lastNoteSec": 63.8,
+      "derived": {
+        "notesPerSec": 3.95,
+        "directionChangeRate": 0.6,
+        "maxScoreAllHit": 1734,
+        "levelAtMax": 5,
+        "notesTo200": 29,
+        "notesSkippedMinCountdown": 3
+      }
+    }
+  ],
+  "units": {
+    "noteSpeed": "m/s",
+    "firstNoteSec": "초",
+    "lastNoteSec": "초",
+    "directionChangeRate": "0 ~ 1 비율"
+  }
+}

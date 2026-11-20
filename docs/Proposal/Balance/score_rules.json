@@ -1,0 +1,69 @@
+{
+  "score": {
+    "firstHitPoints": 5,
+    "comboHitPoints": 7,
+    "missPenalty": 5,
+    "firstLevelUpScore": 200,
+    "levelUpMultiplier": 2,
+    "gameOverScore": 0,
+    "gameOverConsecutiveMiss": 3
+  },
+  "hitZone": {
+    "bladeLength": 2,
+    "greatStart": 1,
+    "marvelousStart": 1.2,
+    "perfectStart": 1.5
+  },
+  "saber": {
+    "minSwingSpeed": 0.5,
+    "cutAngle": 130
+  },
+  "timing": {
+    "missMargin": 1,
+    "scheduleDelay": 0.1,
+    "autoReturnDelay": 3
+  },
+  "units": {
+    "bladeLength": "m",
+    "greatStart": "m",
+    "marvelousStart": "m",
+    "perfectStart": "m",
+    "minSwingSpeed": "m/s",
+    "cutAngle": "도 (초과)",
+    "missMargin": "m",
+    "scheduleDelay": "초",
+    "autoReturnDelay": "초"
+  },
+  "note": {
+    "firstHitPoints": "COMBO 1",
+    "comboHitPoints": "COMBO 2 이상",
+    "missPenalty": "0점 아래로 안 내려감",
+    "levelUpMultiplier": "200 → 400 → 800",
+    "gameOverScore": "Miss 직후 검사",
+    "greatStart": "0 ~ 1.0m = MISS",
+    "perfectStart": "~ 2.0m",
+    "minSwingSpeed": "이보다 느리면 판정 안 함",
+    "cutAngle": "휘두른 방향과 노트 위쪽 사이 각",
+    "missMargin": "플레이어를 1m 지나면 Miss",
+    "scheduleDelay": "dspTime 기준",
+    "autoReturnDelay": "Result 상태에서만 (현재 도달 안 함)"
+  },
+  "source": {
+    "firstHitPoints": "ScoreSystem._firstHitPoints",
+    "comboHitPoints": "ScoreSystem._comboHitPoints",
+    "missPenalty": "vrTEST.unity ScoreSystem._missPenalty (code default 4)",
+    "firstLevelUpScore": "ScoreSystem._firstLevelUpScore",
+    "levelUpMultiplier": "ScoreSystem._levelUpMultiplier",
+    "gameOverScore": "ScoreSystem._gameOverScore",
+    "gameOverConsecutiveMiss": "ScoreSystem._gameOverConsecutiveMiss",
+    "bladeLength": "HitZone._bladeLength",
+    "greatStart": "HitZone._greatStart",
+    "marvelousStart": "HitZone._marvelousStart",
+    "perfectStart": "HitZone._perfectStart",
+    "minSwingSpeed": "Saber._minSwingSpeed",
+    "cutAngle": "Saber",
+    "missMargin": "GM._missMargin",
+    "scheduleDelay": "MusicPlayer._scheduleDelay",
+    "autoReturnDelay": "GM._autoReturnDelay"
+  }
+}
