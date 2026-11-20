@@ -52,4 +52,5 @@
 ---
 
 ## 📁 문서
+- [`Docs/Proposal/Proposal.md`](Docs/Proposal/Proposal.md) — 기획서 세트(컨셉 · 시스템 · 전투 · 레벨 · 밸런스) · 시뮬레이션
 - [`Docs/GameRules.md`](Docs/GameRules.md) — 판정·점수 규칙 & 진행상황

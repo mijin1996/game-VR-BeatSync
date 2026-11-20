@@ -1,0 +1,17 @@
+﻿Key,Name,Value,Source,Note
+FIRST_HIT,첫 Hit 점수,5,ScoreSystem._firstHitPoints,COMBO 1
+COMBO_HIT,연속 Hit 점수,7,ScoreSystem._comboHitPoints,COMBO 2 이상
+MISS_PENALTY,Miss 감점,4,ScoreSystem._missPenalty,0점 아래로 안 내려감
+FIRST_LEVEL_UP,첫 레벨업 점수,200,ScoreSystem._firstLevelUpScore,
+LEVEL_MULTIPLIER,레벨업 점수 배수,2,ScoreSystem._levelUpMultiplier,200 → 400 → 800
+GAMEOVER_SCORE,GAME OVER 점수,0,ScoreSystem._gameOverScore,Miss 직후 검사
+GAMEOVER_MISS,GAME OVER 연속 Miss,3,ScoreSystem._gameOverConsecutiveMiss,
+BLADE,칼 길이,2.0m,HitZone._bladeLength,
+GREAT,GREAT 시작,1.0m,HitZone._greatStart,0 ~ 1.0m = MISS
+MARVELOUS,MARVELOUS 시작,1.2m,HitZone._marvelousStart,
+PERFECT,PERFECT 시작,1.5m,HitZone._perfectStart,~ 2.0m
+MIN_SWING,최소 휘두르기 속도,0.5m/s,Saber._minSwingSpeed,이보다 느리면 판정 안 함
+CUT_ANGLE,방향 판정 각도,130도 초과,Saber,휘두른 방향과 노트 위쪽 사이 각
+MISS_MARGIN,Miss 여유 거리,1m,GM._missMargin,플레이어를 1m 지나면 Miss
+SCHEDULE_DELAY,노래 예약 재생 지연,0.1초,MusicPlayer._scheduleDelay,dspTime 기준
+AUTO_RETURN,결과 후 홈 복귀,3초,GM._autoReturnDelay,Result 상태에서만 (현재 도달 안 함)
