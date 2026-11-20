@@ -1,6 +1,6 @@
 # 베기 · 개체 (칼 · 노트 · 판정 연출)
 
-> 문서 세트: [목차](Proposal.md) · [컨셉](Concept.md) · [시스템](System.md) · **베기·개체** · [레벨 디자인](LevelDesign.md) · [밸런스](Balance.md) · [Suggestions](Suggestions.md)
+> 문서 세트: [목차](Proposal.md) · [컨셉](Concept.md) · [시스템](System.md) · **베기·개체** · [레벨 디자인](LevelDesign.md) · [밸런스](Balance.md) · [needFix](needFix.md)
 > 리듬 게임이라 "전투" 자리에 핵심 조작(베기)과 상호작용 개체(칼 · 노트)를 담았어요. 값은 `vrTEST` 씬 · ScriptableObject 기준.
 
 ---

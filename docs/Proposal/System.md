@@ -1,6 +1,6 @@
 # 시스템 — 게임 흐름 · 노트 생성 · 판정 · 점수
 
-> 문서 세트: [목차](Proposal.md) · [컨셉](Concept.md) · **시스템** · [베기·개체](Combat_Entity.md) · [레벨 디자인](LevelDesign.md) · [밸런스](Balance.md) · [Suggestions](Suggestions.md)
+> 문서 세트: [목차](Proposal.md) · [컨셉](Concept.md) · **시스템** · [베기·개체](Combat_Entity.md) · [레벨 디자인](LevelDesign.md) · [밸런스](Balance.md) · [needFix](needFix.md)
 > 관련 코드: `GM.cs` · `MusicPlayer.cs` · `BeatmapParser.cs` · `LaneMapper.cs` · `NoteScheduler.cs` · `NoteSpawner.cs` · `Note.cs` · `Saber.cs` · `HitZone.cs` · `ScoreSystem.cs` · `CountdownView.cs`
 
 ---
@@ -78,7 +78,7 @@ stateDiagram-v2
 ```
 > 읽는 법: 상자 = 상태, 화살표 위 글 = 상태가 바뀌는 조건이에요. 검은 점에서 시작해요.
 
-> `GameState.Result`와 3초 뒤 자동 홈 복귀 코드가 있지만, 지금은 어떤 경로로도 `Result`에 가지 않아요 → [S-02](Suggestions.md)
+> `GameState.Result`와 3초 뒤 자동 홈 복귀 코드가 있지만, 지금은 어떤 경로로도 `Result`에 가지 않아요 → [S-02](needFix.md)
 
 | 상태 | 음악 | 노트 | 화면에 있는 것 |
 |---|---|---|---|
@@ -300,7 +300,7 @@ flowchart TB
   classDef bad fill:#A33A33,color:#fff,stroke:#A33A33
   classDef todo fill:#6B7280,color:#fff,stroke:#6B7280
 ```
-> 읽는 법: 주황 = 이런 상황이면? → 초록 ✅ 코드가 이미 처리함 / 빨강 ⚠️ 문제 (괄호 = Suggestions 번호) / 회색 💡 고치면 좋은 점. 아래 표에 같은 번호로 자세히 있어요.
+> 읽는 법: 주황 = 이런 상황이면? → 초록 ✅ 코드가 이미 처리함 / 빨강 ⚠️ 문제 (괄호 = needFix 번호) / 회색 💡 고치면 좋은 점. 아래 표에 같은 번호로 자세히 있어요.
 
 
 **[타임라인] 카운트다운 동안 건너뛰는 노트 (예외 #3)**
@@ -325,20 +325,20 @@ gantt
 
 | # | 상황 | 현재 동작 | 상태 |
 |---|---|---|---|
-| 1 | 첫 노트를 놓침 | 0점에서 Miss → 점수 0 → 즉시 GAME OVER | ⚠️ → [S-01](Suggestions.md) |
-| 2 | 노래를 끝까지 완주 | GAME OVER 상태 · 같은 패널로 끝남 | ⚠️ → [S-02](Suggestions.md) |
-| 3 | 카운트다운 중 지나간 노트 | 건너뜀 | ⚠️ → [S-03](Suggestions.md) |
+| 1 | 첫 노트를 놓침 | 0점에서 Miss → 점수 0 → 즉시 GAME OVER | ⚠️ → [S-01](needFix.md) |
+| 2 | 노래를 끝까지 완주 | GAME OVER 상태 · 같은 패널로 끝남 | ⚠️ → [S-02](needFix.md) |
+| 3 | 카운트다운 중 지나간 노트 | 건너뜀 | ⚠️ → [S-03](needFix.md) |
 | 4 | 프레임이 늦어 노트가 늦게 생성 | 늦은 만큼 앞에서 생성 | ✅ |
 | 5 | 한 노트에 칼이 여러 프레임 닿음 | `_isJudged`로 1번만 | ✅ |
 | 6 | 칼을 노트에 대고만 있음 | 0.5m/s 미만이면 판정 안 함 | ✅ |
-| 7 | 칼이 지나가며 손잡이 쪽이 먼저 닿음 | 처음 닿은 지점이 0 ~ 1m면 즉시 MISS | ⚠️ → [S-04](Suggestions.md) |
-| 8 | "아무 방향(Any)" 노트 | 아래로 베기로 처리 | ⚠️ → [S-05](Suggestions.md) |
+| 7 | 칼이 지나가며 손잡이 쪽이 먼저 닿음 | 처음 닿은 지점이 0 ~ 1m면 즉시 MISS | ⚠️ → [S-04](needFix.md) |
+| 8 | "아무 방향(Any)" 노트 | 아래로 베기로 처리 | ⚠️ → [S-05](needFix.md) |
 | 9 | 폭탄 노트(type 3) | 읽을 때 제외 | ✅ |
 | 10 | 2줄로 합칠 때 같은 시간 · 줄 · 층에 겹침 | 하나만 남김 | ✅ |
-| 11 | 줄 수 3 | `LaneMapper`가 4 미만이면 2줄로 → 3은 2와 같음 | → [S-06](Suggestions.md) |
+| 11 | 줄 수 3 | `LaneMapper`가 4 미만이면 2줄로 → 3은 2와 같음 | → [S-06](needFix.md) |
 | 12 | 곡을 선택하지 않고 START | 무시 | ✅ |
 | 13 | GAME OVER 후 RESTART | 같은 곡 · 난이도로 처음부터, 점수 0 | ✅ |
-| 14 | 헤드셋을 벗음 | 처리 없음 → 노래 · 노트 계속 | → [S-07](Suggestions.md) |
+| 14 | 헤드셋을 벗음 | 처리 없음 → 노래 · 노트 계속 | → [S-07](needFix.md) |
 
 ---
 

@@ -1,6 +1,6 @@
 # 게임 컨셉 — VR BeatSync
 
-> 문서 세트: [목차](Proposal.md) · **컨셉** · [시스템](System.md) · [베기·개체](Combat_Entity.md) · [레벨 디자인](LevelDesign.md) · [밸런스](Balance.md) · [Suggestions](Suggestions.md)
+> 문서 세트: [목차](Proposal.md) · **컨셉** · [시스템](System.md) · [베기·개체](Combat_Entity.md) · [레벨 디자인](LevelDesign.md) · [밸런스](Balance.md) · [needFix](needFix.md)
 
 ---
 
@@ -139,4 +139,4 @@ flowchart TD
 |---|---|
 | 구현됨 | 비트맵 파싱 · 시간 맞춤 노트 생성 · 음악 예약 재생 · 카운트다운 · 칼 판정 3단계 · 방향 판정 · 점수 · 콤보 · 레벨 · GAME OVER 3조건 · 곡 / 난이도 선택 · 연출 |
 | 구조 | 인터페이스 13개로 역할 분리, `InterfaceReference`로 인스펙터에서 연결 |
-| 다음 할 일 | [Suggestions](Suggestions.md) |
+| 다음 할 일 | [needFix](needFix.md) |

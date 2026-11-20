@@ -1,6 +1,6 @@
 # 밸런스 · 데이터
 
-> 문서 세트: [목차](Proposal.md) · [컨셉](Concept.md) · [시스템](System.md) · [베기·개체](Combat_Entity.md) · [레벨 디자인](LevelDesign.md) · **밸런스** · [Suggestions](Suggestions.md)
+> 문서 세트: [목차](Proposal.md) · [컨셉](Concept.md) · [시스템](System.md) · [베기·개체](Combat_Entity.md) · [레벨 디자인](LevelDesign.md) · **밸런스** · [needFix](needFix.md)
 > 데이터 파일 (JSON · Unity `JsonUtility`로 바로 읽는 구조): [`score_rules.json`](Balance/score_rules.json) · [`beatmap_stats.json`](Balance/beatmap_stats.json)
 > 값은 `vrTEST` 씬 · ScriptableObject · 비트맵 JSON 기준
 

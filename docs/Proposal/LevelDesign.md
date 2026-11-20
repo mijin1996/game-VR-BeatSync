@@ -1,6 +1,6 @@
 # 레벨 디자인 — 노트 배치 · 곡 · 난이도
 
-> 문서 세트: [목차](Proposal.md) · [컨셉](Concept.md) · [시스템](System.md) · [베기·개체](Combat_Entity.md) · **레벨 디자인** · [밸런스](Balance.md) · [Suggestions](Suggestions.md)
+> 문서 세트: [목차](Proposal.md) · [컨셉](Concept.md) · [시스템](System.md) · [베기·개체](Combat_Entity.md) · **레벨 디자인** · [밸런스](Balance.md) · [needFix](needFix.md)
 > 데이터: [`Balance/beatmap_stats.json`](Balance/beatmap_stats.json) — 비트맵 JSON 9개를 읽어 계산
 
 ---
@@ -83,7 +83,7 @@ pie title 빨강 노트의 위치 (악보 9개 집계)
 - 같은 난이도라도 곡마다 밀도가 다름: Echoes of Lumen Hard(1.35) < Club Change Up Normal(2.62)
 - 세 난이도 모두 줄 2개 (`_laneCount` 범위는 2 ~ 4)
 
-> 난이도 기준 정리는 [S-10](Suggestions.md)
+> 난이도 기준 정리는 [S-10](needFix.md)
 
 **[막대그래프] 곡 · 난이도별 초당 노트 수**
 ```mermaid
