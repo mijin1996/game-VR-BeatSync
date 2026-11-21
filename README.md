@@ -52,5 +52,5 @@
 ---
 
 ## 📁 문서
-- [`docs/Proposal/Proposal.md`](docs/Proposal/Proposal.md) — 기획서 (컨셉 ~ 사업화 · 법무) · [needFix](docs/Proposal/needFix.md)
+- [`docs/Proposal/Index.md`](docs/Proposal/Index.md) — 기획서 (컨셉 ~ 사업화 · 법무) · [needFix](docs/Proposal/needFix.md)
 - [`docs/GameRules.md`](docs/GameRules.md) — 판정·점수 규칙 & 진행상황
