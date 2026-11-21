@@ -61,7 +61,6 @@ flowchart LR
   classDef ui fill:#5A4A9E,color:#fff,stroke:#5A4A9E
   classDef data fill:#A33A33,color:#fff,stroke:#A33A33
 ```
-> 읽는 법: 상자 = 씬 · 스크립트 · 오브젝트, 화살표 위 글 = 보내는 신호나 하는 일이에요. ①②③은 일어나는 순서예요.
 
 ## 1. 게임 상태 머신 (`GM`)
 
@@ -85,7 +84,6 @@ stateDiagram-v2
   class Playing play
   class GameOver fail
 ```
-> 읽는 법: 상자 = 상태, 화살표 위 글 = 상태가 바뀌는 조건이에요. 검은 점에서 시작해요.
 
 > `GameState.Result`와 3초 뒤 자동 홈 복귀 코드가 있지만, 지금은 어떤 경로로도 `Result`에 가지 않아요 → [S-02](needFix.md)
 
@@ -132,7 +130,6 @@ flowchart TD
   classDef io fill:#5A4A9E,color:#fff,stroke:#5A4A9E
   classDef endc fill:#6B7280,color:#fff,stroke:#6B7280
 ```
-> 읽는 법: 초록에서 시작해 화살표를 따라 내려가요. 주황 마름모에서 Y(예) / N(아니오)으로 갈라져요.
 
 > 세부 조건(코드 기준)은 [부록 A-1](#a-1-게임-시작-playroutine)에 있어요.
 
@@ -165,7 +162,6 @@ flowchart TD
   classDef io fill:#5A4A9E,color:#fff,stroke:#5A4A9E
   classDef endc fill:#6B7280,color:#fff,stroke:#6B7280
 ```
-> 읽는 법: 초록에서 시작해 화살표를 따라 내려가요. 주황 마름모에서 Y(예) / N(아니오)으로 갈라져요.
 
 **음악과 노트를 맞추는 방법**
 ```
@@ -221,7 +217,6 @@ flowchart TD
   classDef io fill:#5A4A9E,color:#fff,stroke:#5A4A9E
   classDef endc fill:#6B7280,color:#fff,stroke:#6B7280
 ```
-> 읽는 법: 초록에서 시작해 화살표를 따라 내려가요. 주황 마름모에서 Y(예) / N(아니오)으로 갈라져요.
 
 **방향 판정**
 ```
@@ -271,7 +266,6 @@ flowchart TD
   classDef io fill:#5A4A9E,color:#fff,stroke:#5A4A9E
   classDef endc fill:#6B7280,color:#fff,stroke:#6B7280
 ```
-> 읽는 법: 초록에서 시작해 화살표를 따라 내려가요. 주황 마름모에서 Y(예) / N(아니오)으로 갈라져요.
 
 > 세부 조건(코드 기준)은 [부록 A-4](#a-4-점수-scoresystemregister)에 있어요.
 
@@ -309,7 +303,6 @@ flowchart TB
   classDef bad fill:#A33A33,color:#fff,stroke:#A33A33
   classDef todo fill:#6B7280,color:#fff,stroke:#6B7280
 ```
-> 읽는 법: 주황 = 이런 상황이면? → 초록 ✅ 코드가 이미 처리함 / 빨강 ⚠️ 문제 (괄호 = needFix 번호) / 회색 💡 고치면 좋은 점. 아래 표에 같은 번호로 자세히 있어요.
 
 **[타임라인] 카운트다운 동안 건너뛰는 노트 (예외 #3)**
 ```mermaid
@@ -329,7 +322,6 @@ gantt
   생성 :milestone, s3, 2600, 0ms
   생성 :milestone, s4, 3300, 0ms
 ```
-> 읽는 법: 노래는 카운트다운과 함께 시작해서, 처음 2초 안에 생성될 노트는 건너뛰어요. 왼쪽 → 오른쪽이 시간이에요. 막대 = 이어지는 동안, 마름모 = 그 순간. 빨간 막대는 위험하거나 못 움직이는 시간이에요.
 
 | # | 상황 | 현재 동작 | 상태 |
 |---|---|---|---|
