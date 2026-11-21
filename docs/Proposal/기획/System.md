@@ -1,6 +1,6 @@
 # 시스템 — 게임 흐름 · 노트 생성 · 판정 · 점수
 
-> 문서 세트: [목차](Proposal.md) · 기획: [컨셉](Concept.md) · **시스템** · [전투·개체](Combat_Entity.md) · [레벨 디자인](LevelDesign.md) · [밸런스](Balance.md) · 사업·운영: [사업 검토](Business.md) · [요구사항·로드맵](Requirements.md) · [Business Model](Monetization.md) · [서버·데이터](Server_Data.md) · [리소스](Resources.md) · [로그·지표](Analytics.md) · [QA·출시](QA_Release.md) · [라이브 운영](LiveOps.md) · [사업화·법무](Business_Legal.md) · [needFix](needFix.md)
+> 문서 세트: [목차](../Proposal.md) · 기획: [컨셉](Concept.md) · **시스템** · [전투·개체](Combat_Entity.md) · [레벨 디자인](LevelDesign.md) · [밸런스](Balance.md) · 사업·운영: [사업 검토](../대표/Business.md) · [요구사항·로드맵](Requirements.md) · [Business Model](Monetization.md) · [서버·데이터](../개발/Server_Data.md) · [리소스](../디자인/Resources.md) · [로그·지표](Analytics.md) · [QA·출시](../QA/QA_Release.md) · [라이브 운영](../운영/LiveOps.md) · [사업화·법무](../대표/Business_Legal.md) · [needFix](../needFix.md)
 > 관련 코드: `GM.cs` · `MusicPlayer.cs` · `BeatmapParser.cs` · `LaneMapper.cs` · `NoteScheduler.cs` · `NoteSpawner.cs` · `Note.cs` · `Saber.cs` · `HitZone.cs` · `ScoreSystem.cs` · `CountdownView.cs`
 
 > **문서 정보** · 문서 번호 `D03-SYSTEM` · 버전 v1.0 · 상태 `Review` · 담당 기획자 · 클라이언트 개발자 · 최종 수정 2026-11-21 · 관련 문서 [전투·개체](Combat_Entity.md) · [Business Model](Monetization.md)
@@ -85,7 +85,7 @@ stateDiagram-v2
   class GameOver fail
 ```
 
-> `GameState.Result`와 3초 뒤 자동 홈 복귀 코드가 있지만, 지금은 어떤 경로로도 `Result`에 가지 않아요 → [S-02](needFix.md)
+> `GameState.Result`와 3초 뒤 자동 홈 복귀 코드가 있지만, 지금은 어떤 경로로도 `Result`에 가지 않아요 → [S-02](../needFix.md)
 
 | 상태 | 음악 | 노트 | 화면에 있는 것 |
 |---|---|---|---|
@@ -325,20 +325,20 @@ gantt
 
 | # | 상황 | 현재 동작 | 상태 |
 |---|---|---|---|
-| 1 | 첫 노트를 놓침 | 0점에서 Miss → 점수 0 → 즉시 GAME OVER | ⚠️ → [S-01](needFix.md) |
-| 2 | 노래를 끝까지 완주 | GAME OVER 상태 · 같은 패널로 끝남 | ⚠️ → [S-02](needFix.md) |
-| 3 | 카운트다운 중 지나간 노트 | 건너뜀 | ⚠️ → [S-03](needFix.md) |
+| 1 | 첫 노트를 놓침 | 0점에서 Miss → 점수 0 → 즉시 GAME OVER | ⚠️ → [S-01](../needFix.md) |
+| 2 | 노래를 끝까지 완주 | GAME OVER 상태 · 같은 패널로 끝남 | ⚠️ → [S-02](../needFix.md) |
+| 3 | 카운트다운 중 지나간 노트 | 건너뜀 | ⚠️ → [S-03](../needFix.md) |
 | 4 | 프레임이 늦어 노트가 늦게 생성 | 늦은 만큼 앞에서 생성 | ✅ |
 | 5 | 한 노트에 칼이 여러 프레임 닿음 | `_isJudged`로 1번만 | ✅ |
 | 6 | 칼을 노트에 대고만 있음 | 0.5m/s 미만이면 판정 안 함 | ✅ |
-| 7 | 칼이 지나가며 손잡이 쪽이 먼저 닿음 | 처음 닿은 지점이 0 ~ 1m면 즉시 MISS | ⚠️ → [S-04](needFix.md) |
-| 8 | "아무 방향(Any)" 노트 | 아래로 베기로 처리 | ⚠️ → [S-05](needFix.md) |
+| 7 | 칼이 지나가며 손잡이 쪽이 먼저 닿음 | 처음 닿은 지점이 0 ~ 1m면 즉시 MISS | ⚠️ → [S-04](../needFix.md) |
+| 8 | "아무 방향(Any)" 노트 | 아래로 베기로 처리 | ⚠️ → [S-05](../needFix.md) |
 | 9 | 폭탄 노트(type 3) | 읽을 때 제외 | ✅ |
 | 10 | 2줄로 합칠 때 같은 시간 · 줄 · 층에 겹침 | 하나만 남김 | ✅ |
-| 11 | 줄 수 3 | `LaneMapper`가 4 미만이면 2줄로 → 3은 2와 같음 | → [S-06](needFix.md) |
+| 11 | 줄 수 3 | `LaneMapper`가 4 미만이면 2줄로 → 3은 2와 같음 | → [S-06](../needFix.md) |
 | 12 | 곡을 선택하지 않고 START | 무시 | ✅ |
 | 13 | GAME OVER 후 RESTART | 같은 곡 · 난이도로 처음부터, 점수 0 | ✅ |
-| 14 | 헤드셋을 벗음 | 처리 없음 → 노래 · 노트 계속 | → [S-07](needFix.md) |
+| 14 | 헤드셋을 벗음 | 처리 없음 → 노래 · 노트 계속 | → [S-07](../needFix.md) |
 
 ---
 

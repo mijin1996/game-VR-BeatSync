@@ -18,10 +18,10 @@
 ## 2. 용어
 | 용어 | 뜻 | 코드 · 데이터 이름 | 관련 문서 |
 |---|---|---|---|
-| 노트 | 박자에 맞춰 날아오는 베어야 할 블록 (화살표 방향 있음) | `Note` | [전투·개체](Combat_Entity.md) |
-| 칼 | 양손 컨트롤러에 붙은 2m 칼 | `Saber` · `HitZone` | [전투·개체](Combat_Entity.md) §2 |
-| 판정 | 칼의 어느 구간에 맞았는지로 정하는 PERFECT · MARVELOUS · GREAT · MISS | `HitZone` | [전투·개체](Combat_Entity.md) §2 |
-| 방향 판정 | 휘두른 방향이 노트 화살표와 맞는지 (130도 초과) | — | [전투·개체](Combat_Entity.md) §2 |
-| 비트맵 | 곡마다 노트가 나오는 시간 · 위치를 적은 데이터 | — | [레벨 디자인](LevelDesign.md) |
-| 스포너 | 비트맵을 읽어 노트를 내보내는 장치 | `Spawner` | [시스템](System.md) |
-| 박자 지연 보정 | 기기마다 다른 소리 · 화면 지연을 맞추는 값 | — | [QA·출시](QA_Release.md) §4 |
+| 노트 | 박자에 맞춰 날아오는 베어야 할 블록 (화살표 방향 있음) | `Note` | [전투·개체](기획/Combat_Entity.md) |
+| 칼 | 양손 컨트롤러에 붙은 2m 칼 | `Saber` · `HitZone` | [전투·개체](기획/Combat_Entity.md) §2 |
+| 판정 | 칼의 어느 구간에 맞았는지로 정하는 PERFECT · MARVELOUS · GREAT · MISS | `HitZone` | [전투·개체](기획/Combat_Entity.md) §2 |
+| 방향 판정 | 휘두른 방향이 노트 화살표와 맞는지 (130도 초과) | — | [전투·개체](기획/Combat_Entity.md) §2 |
+| 비트맵 | 곡마다 노트가 나오는 시간 · 위치를 적은 데이터 | — | [레벨 디자인](기획/LevelDesign.md) |
+| 스포너 | 비트맵을 읽어 노트를 내보내는 장치 | `Spawner` | [시스템](기획/System.md) |
+| 박자 지연 보정 | 기기마다 다른 소리 · 화면 지연을 맞추는 값 | — | [QA·출시](QA/QA_Release.md) §4 |

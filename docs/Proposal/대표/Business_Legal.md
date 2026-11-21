@@ -1,8 +1,8 @@
 # 사업화 · 법무 체크리스트 — VR BeatSync
 
-> 문서 세트: [목차](Proposal.md) · 기획: [컨셉](Concept.md) · [시스템](System.md) · [전투·개체](Combat_Entity.md) · [레벨 디자인](LevelDesign.md) · [밸런스](Balance.md) · 사업·운영: [사업 검토](Business.md) · [요구사항·로드맵](Requirements.md) · [Business Model](Monetization.md) · [서버·데이터](Server_Data.md) · [리소스](Resources.md) · [로그·지표](Analytics.md) · [QA·출시](QA_Release.md) · [라이브 운영](LiveOps.md) · **사업화·법무** · [needFix](needFix.md)
+> 문서 세트: [목차](../Proposal.md) · 기획: [컨셉](../기획/Concept.md) · [시스템](../기획/System.md) · [전투·개체](../기획/Combat_Entity.md) · [레벨 디자인](../기획/LevelDesign.md) · [밸런스](../기획/Balance.md) · 사업·운영: [사업 검토](Business.md) · [요구사항·로드맵](../기획/Requirements.md) · [Business Model](../기획/Monetization.md) · [서버·데이터](../개발/Server_Data.md) · [리소스](../디자인/Resources.md) · [로그·지표](../기획/Analytics.md) · [QA·출시](../QA/QA_Release.md) · [라이브 운영](../운영/LiveOps.md) · **사업화·법무** · [needFix](../needFix.md)
 
-> **문서 정보** · 문서 번호 `D13-LEGAL` · 버전 v1.0 · 상태 `Draft` · 담당 대표 · 최종 수정 2026-11-21 · 관련 문서 [리소스](Resources.md) · [QA·출시](QA_Release.md)
+> **문서 정보** · 문서 번호 `D13-LEGAL` · 버전 v1.0 · 상태 `Draft` · 담당 대표 · 최종 수정 2026-11-21 · 관련 문서 [리소스](../디자인/Resources.md) · [QA·출시](../QA/QA_Release.md)
 
 **변경 이력**
 
@@ -24,8 +24,8 @@
 | | 통신판매업 신고 | 유료 앱 판매 시 필요 여부 확인 | 대기 | |
 | | 게임 관련 업 등록 | 게임산업법상 게임제작업 · 배급업 등록 대상인지 확인 | 대기 | |
 | 스토어 | VR 스토어 개발자 계정 | 조직(사업자) 계정 · 판매자 정보 · 정산 · 세금 정보 | 대기 | |
-| | 수수료 | VR 스토어 수수료율 확인 ([Business Model](Monetization.md) §5 가정 30%) | 대기 | |
-| | 스토어 심사 기준 | 기술 · 콘텐츠 기준을 [QA](QA_Release.md) TC로 | 대기 | |
+| | 수수료 | VR 스토어 수수료율 확인 ([Business Model](../기획/Monetization.md) §5 가정 30%) | 대기 | |
+| | 스토어 심사 기준 | 기술 · 콘텐츠 기준을 [QA](../QA/QA_Release.md) TC로 | 대기 | |
 | 게임 규제 | 등급분류 | 해당 스토어의 등급 절차 (자체등급분류 · IARC 등) | 대기 | |
 | | 확률 정보 공개 | 없음 | 해당 없음 | |
 | 개인정보 | 개인정보처리방침 | 분석 도구를 쓰면 필요. VR 추적 데이터를 수집하지 않음을 명시 | 대기 | |
@@ -35,9 +35,9 @@
 | | **악보 (Beat Sage 생성)** | AI 생성 도구 이용 조건 · 생성물 상업 이용 | ⚠️ 대기 | |
 | | 다른 게임과의 유사성 | 대표작의 이름 · 로고 · 고유 디자인을 쓰지 않음 | 대기 | |
 | | 상표 | "BeatSync" 이름 검색 (음악 · 앱 분야에 흔한 이름일 수 있음) | 대기 | |
-| | 에셋 | Fab · Asset Store 구매 기록 ([리소스](Resources.md) §3) | 대기 | |
+| | 에셋 | Fab · Asset Store 구매 기록 ([리소스](../디자인/Resources.md) §3) | 대기 | |
 | 서비스 종료 | 종료 절차 | 곡 라이선스 기간이 정해져 있으면 판매 중단 시점 | 대기 | |
 
 ## 3. 이 게임에서 먼저 볼 것
-1. **곡 · 악보 권리** — 리듬 게임은 곡이 상품이에요. 라이선스가 기간제라면 판매 기간도 그에 묶여요 → [F-03](needFix.md#8-정할-것)
-2. **이름 "BeatSync"** — 흔한 조합이라 상표 · 스토어 검색에서 겹칠 수 있어요 → [F-06](needFix.md)
+1. **곡 · 악보 권리** — 리듬 게임은 곡이 상품이에요. 라이선스가 기간제라면 판매 기간도 그에 묶여요 → [F-03](../needFix.md#8-정할-것)
+2. **이름 "BeatSync"** — 흔한 조합이라 상표 · 스토어 검색에서 겹칠 수 있어요 → [F-06](../needFix.md)

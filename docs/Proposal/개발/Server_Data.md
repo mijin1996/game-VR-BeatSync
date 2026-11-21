@@ -1,8 +1,8 @@
 # 서버 · 데이터 연동 — VR BeatSync
 
-> 문서 세트: [목차](Proposal.md) · 기획: [컨셉](Concept.md) · [시스템](System.md) · [전투·개체](Combat_Entity.md) · [레벨 디자인](LevelDesign.md) · [밸런스](Balance.md) · 사업·운영: [사업 검토](Business.md) · [요구사항·로드맵](Requirements.md) · [Business Model](Monetization.md) · **서버·데이터** · [리소스](Resources.md) · [로그·지표](Analytics.md) · [QA·출시](QA_Release.md) · [라이브 운영](LiveOps.md) · [사업화·법무](Business_Legal.md) · [needFix](needFix.md)
+> 문서 세트: [목차](../Proposal.md) · 기획: [컨셉](../기획/Concept.md) · [시스템](../기획/System.md) · [전투·개체](../기획/Combat_Entity.md) · [레벨 디자인](../기획/LevelDesign.md) · [밸런스](../기획/Balance.md) · 사업·운영: [사업 검토](../대표/Business.md) · [요구사항·로드맵](../기획/Requirements.md) · [Business Model](../기획/Monetization.md) · **서버·데이터** · [리소스](../디자인/Resources.md) · [로그·지표](../기획/Analytics.md) · [QA·출시](../QA/QA_Release.md) · [라이브 운영](../운영/LiveOps.md) · [사업화·법무](../대표/Business_Legal.md) · [needFix](../needFix.md)
 
-> **문서 정보** · 문서 번호 `D08-SERVER` · 버전 v1.0 · 상태 `Draft` · 담당 서버 개발자 · 최종 수정 2026-11-21 · 관련 문서 [시스템](System.md) · [Business Model](Monetization.md)
+> **문서 정보** · 문서 번호 `D08-SERVER` · 버전 v1.0 · 상태 `Draft` · 담당 서버 개발자 · 최종 수정 2026-11-21 · 관련 문서 [시스템](../기획/System.md) · [Business Model](../기획/Monetization.md)
 
 **변경 이력**
 
@@ -45,5 +45,5 @@
 | 항목 | 내용 |
 |---|---|
 | 지금 | Beat Sage가 만든 `.dat`를 `.json`으로 이름만 바꿔 사용 (`Sounds/BeatSaga/`) |
-| 곡 ID | `SONG_001`처럼 ID를 정하고 폴더 · ScriptableObject · 기록에서 같은 ID 사용 → [F-05](needFix.md#8-정할-것) |
+| 곡 ID | `SONG_001`처럼 ID를 정하고 폴더 · ScriptableObject · 기록에서 같은 ID 사용 → [F-05](../needFix.md#8-정할-것) |
 | 곡 팩 | 빌드에 넣는 방식(업데이트) vs 내려받는 방식(Addressables) 결정 |

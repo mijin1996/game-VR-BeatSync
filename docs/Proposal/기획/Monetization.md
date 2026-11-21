@@ -1,8 +1,8 @@
 # Business Model — VR BeatSync
 
-> 문서 세트: [목차](Proposal.md) · 기획: [컨셉](Concept.md) · [시스템](System.md) · [전투·개체](Combat_Entity.md) · [레벨 디자인](LevelDesign.md) · [밸런스](Balance.md) · 사업·운영: [사업 검토](Business.md) · [요구사항·로드맵](Requirements.md) · **Business Model** · [서버·데이터](Server_Data.md) · [리소스](Resources.md) · [로그·지표](Analytics.md) · [QA·출시](QA_Release.md) · [라이브 운영](LiveOps.md) · [사업화·법무](Business_Legal.md) · [needFix](needFix.md)
+> 문서 세트: [목차](../Proposal.md) · 기획: [컨셉](Concept.md) · [시스템](System.md) · [전투·개체](Combat_Entity.md) · [레벨 디자인](LevelDesign.md) · [밸런스](Balance.md) · 사업·운영: [사업 검토](../대표/Business.md) · [요구사항·로드맵](Requirements.md) · **Business Model** · [서버·데이터](../개발/Server_Data.md) · [리소스](../디자인/Resources.md) · [로그·지표](Analytics.md) · [QA·출시](../QA/QA_Release.md) · [라이브 운영](../운영/LiveOps.md) · [사업화·법무](../대표/Business_Legal.md) · [needFix](../needFix.md)
 
-> **문서 정보** · 문서 번호 `D07-BM` · 버전 v1.0 · 상태 `Draft` · 담당 기획자 · 대표 · 최종 수정 2026-11-21 · 관련 문서 [밸런스](Balance.md) · [서버·데이터](Server_Data.md)
+> **문서 정보** · 문서 번호 `D07-BM` · 버전 v1.0 · 상태 `Draft` · 담당 기획자 · 대표 · 최종 수정 2026-11-21 · 관련 문서 [밸런스](Balance.md) · [서버·데이터](../개발/Server_Data.md)
 
 **변경 이력**
 
@@ -27,7 +27,7 @@
 ## 3. 가격 (제안)
 | 상품 ID | 이름 | 가격 | 구성 |
 |---|---|---|---|
-| `PRD_BASE` | 본편 | ₩9,900 ~ ₩14,900 (경쟁작 가격 조사 후 확정 → [F-04](needFix.md)) | 곡 5곡 이상 × 난이도 3종 |
+| `PRD_BASE` | 본편 | ₩9,900 ~ ₩14,900 (경쟁작 가격 조사 후 확정 → [F-04](../needFix.md)) | 곡 5곡 이상 × 난이도 3종 |
 | `PRD_PACK_001` | 곡 팩 1 (출시 후) | ₩3,300 | 3곡 |
 
 > 가격은 곡 수 · 플레이 시간에 맞춰요. 곡 1곡 × 3난이도를 3번씩 = 약 30분 → 5곡이면 약 2.5시간 분량이에요.
@@ -45,7 +45,7 @@
 
 예) 첫 3개월 판매 500개 × ₩12,900 × (1 − 0.30) × (1 − 0.05) = 약 ₩429만
 ```
-> VR 스토어 수수료는 30%로 가정했어요 (스토어 조건 확인 → [사업화 · 법무](Business_Legal.md)). 판매 수는 가정이에요.
+> VR 스토어 수수료는 30%로 가정했어요 (스토어 조건 확인 → [사업화 · 법무](../대표/Business_Legal.md)). 판매 수는 가정이에요.
 
 ## 6. 예외 처리
 | 상황 | 처리 |
