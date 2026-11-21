@@ -1,14 +1,14 @@
 # 요구사항 · 로드맵 — VR BeatSync
 
-> 문서 세트: [목차](Proposal.md) · 기획: [컨셉](Concept.md) · [시스템](System.md) · [전투·개체](Combat_Entity.md) · [레벨 디자인](LevelDesign.md) · [밸런스](Balance.md) · 사업·운영: [사업 검토](Business.md) · **요구사항·로드맵** · [BM·경제](Monetization.md) · [서버·데이터](Server_Data.md) · [리소스](Resources.md) · [로그·지표](Analytics.md) · [QA·출시](QA_Release.md) · [라이브 운영](LiveOps.md) · [사업화·법무](Business_Legal.md) · [needFix](needFix.md)
+> 문서 세트: [목차](Proposal.md) · 기획: [컨셉](Concept.md) · [시스템](System.md) · [전투·개체](Combat_Entity.md) · [레벨 디자인](LevelDesign.md) · [밸런스](Balance.md) · 사업·운영: [사업 검토](Business.md) · **요구사항·로드맵** · [Business Model](Monetization.md) · [서버·데이터](Server_Data.md) · [리소스](Resources.md) · [로그·지표](Analytics.md) · [QA·출시](QA_Release.md) · [라이브 운영](LiveOps.md) · [사업화·법무](Business_Legal.md) · [needFix](needFix.md)
 
-> **문서 정보** · ID `D02-REQ` · v1.0 · 상태 `Draft` · Owner ME (기획 · 개발) · 최종 수정 2026-11-21 · 관련 `needFix`
+> **문서 정보** · 문서 번호 `D02-REQ` · 버전 v1.0 · 상태 `Draft` · 담당 기획자 · 최종 수정 2026-11-21 · 관련 문서 [needFix](needFix.md)
 
 **변경 이력**
 
 | 버전 | 날짜 | 변경 내용 | 사유 | 결정자 | 영향 범위 |
 |---|---|---|---|---|---|
-| v1.0 | 2026-11-21 | 최초 작성 | 사내 문서 기준 v3 적용 | ME | 문서만 |
+| v1.0 | 2026-11-21 | 최초 작성 | — | 기획자 | — |
 
 ---
 
@@ -18,27 +18,27 @@
 ## 2. 이미 구현된 것
 | ID | 기능 | 근거 문서 | 상태 |
 |---|---|---|---|
-| `REQ_001` | 양손 칼 · 노트 베기 · 방향 판정 | [시스템](System.md) · [전투 · 개체](Combat_Entity.md) | 완료 (판정 범위 S-04 · S-05) |
+| `REQ_001` | 양손 칼 · 노트 베기 · 방향 판정 | [시스템](System.md) · [전투 · 개체](Combat_Entity.md) | 완료 (판정 범위 [S-04](needFix.md) · [S-05](needFix.md)) |
 | `REQ_002` | 3단계 판정 (PERFECT · MARVELOUS · GREAT) · 콤보 · 점수 | [밸런스](Balance.md) · `docs/GameRules.md` | 완료 |
 | `REQ_003` | 비트맵(JSON) 읽기 · 곡 3 ~ 4개 · 난이도 3종 | [레벨 디자인](LevelDesign.md) | 완료 |
-| `REQ_004` | 카운트다운 · 곡 선택 | [시스템](System.md) | 완료 (S-03) |
+| `REQ_004` | 카운트다운 · 곡 선택 | [시스템](System.md) | 완료 ([S-03](needFix.md)) |
 
 ## 3. 출시까지 할 일
 | ID | 기능 | 우선순위 | 마일스톤 | 공수 | 관련 | 상태 |
 |---|---|---|---|---|---|---|
-| `REQ_101` | 첫 Hit 전 0점 GAME OVER 제외 + 체력 게이지 | Must | 알파 | 2일 | S-01 · S-17 | 대기 |
-| `REQ_102` | 완주 → 결과 화면 (CLEAR · 랭크 · 정확도) | Must | 알파 | 1일 | S-02 | 대기 |
-| `REQ_103` | 카운트다운 뒤 노래 · 노트 시작 (앞 노트 사라짐 방지) | Must | 알파 | 1일 | S-03 | 대기 |
-| `REQ_104` | 헤드셋 해제 · 메뉴 버튼 시 일시정지 (오디오 시계 보정) | Must | 알파 | 1일 | S-07 | 대기 |
-| `REQ_105` | 칼끝 거리 판정 · Any 방향 · 3줄 매핑 | Must | 베타 | 2일 | S-04 ~ S-06 · S-19 | 대기 |
-| `REQ_106` | 랭크 기준선 · 판정 점수 확정 | Must | 베타 | 1일 + 테스트 | S-08 | 대기 |
-| `REQ_107` | 박자 보정 (`_timingOffset`) 설정 화면 · 측정 방법 | Must | 베타 | 2일 | S-16 · S-18 | 대기 |
+| `REQ_101` | 첫 Hit 전 0점 GAME OVER 제외 + 체력 게이지 | Must | 알파 | 2일 | [S-01](needFix.md) · [S-17](needFix.md) | 대기 |
+| `REQ_102` | 완주 → 결과 화면 (CLEAR · 랭크 · 정확도) | Must | 알파 | 1일 | [S-02](needFix.md) | 대기 |
+| `REQ_103` | 카운트다운 뒤 노래 · 노트 시작 (앞 노트 사라짐 방지) | Must | 알파 | 1일 | [S-03](needFix.md) | 대기 |
+| `REQ_104` | 헤드셋 해제 · 메뉴 버튼 시 일시정지 (오디오 시계 보정) | Must | 알파 | 1일 | [S-07](needFix.md) | 대기 |
+| `REQ_105` | 칼끝 거리 판정 · Any 방향 · 3줄 매핑 | Must | 베타 | 2일 | [S-04](needFix.md) ~ [S-06](needFix.md) · [S-19](needFix.md) | 대기 |
+| `REQ_106` | 랭크 기준선 · 판정 점수 확정 | Must | 베타 | 1일 + 테스트 | [S-08](needFix.md) | 대기 |
+| `REQ_107` | 박자 보정 (`_timingOffset`) 설정 화면 · 측정 방법 | Must | 베타 | 2일 | [S-16](needFix.md) · [S-18](needFix.md) | 대기 |
 | `REQ_108` | 곡별 최고 랭크 저장 · 다음 난이도 해금 | Must | 베타 | 1일 | needFix §7 | 대기 |
-| `REQ_109` | 콤보 연출 | Should | 베타 | 1일 | S-12 | 대기 |
+| `REQ_109` | 콤보 연출 | Should | 베타 | 1일 | [S-12](needFix.md) | 대기 |
 | `REQ_110` | VR 편의 · 안전 (앉아서 모드 · 높이 보정 · 경고 화면) | Must | 베타 | 2일 | [QA](QA_Release.md) §4 | 대기 |
 | `REQ_111` | 로그 이벤트 | Should | 베타 | 1일 | [로그](Analytics.md) | 대기 |
-| `REQ_112` | 상업 이용 가능한 곡 5곡 이상 (교체 · 구매 · 의뢰) | Must | 출시 | 외부 일정 | F-03 | 대기 |
-| `REQ_113` | 정식 메인 · 곡 선택 씬 (지금은 `vrTEST`) | Must | 베타 | 3일 | S-13 | 대기 |
+| `REQ_112` | 상업 이용 가능한 곡 5곡 이상 (교체 · 구매 · 의뢰) | Must | 출시 | 외부 일정 | [F-03](needFix.md) | 대기 |
+| `REQ_113` | 정식 메인 · 곡 선택 씬 (지금은 `vrTEST`) | Must | 베타 | 3일 | [S-13](needFix.md) | 대기 |
 | `REQ_114` | 라이선스 · 크레딧 화면 | Must | 출시 | 0.5일 | [사업화 · 법무](Business_Legal.md) | 대기 |
 | `REQ_201` | 정기 신곡 · 칼 스킨 · 주간 랭킹 | Won't | — | — | §6 | 보류 |
 
