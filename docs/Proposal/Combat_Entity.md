@@ -55,7 +55,6 @@ flowchart LR
   classDef blue fill:#3AA6C8,color:#fff,stroke:#3AA6C8
   classDef ui fill:#5A4A9E,color:#fff,stroke:#5A4A9E
 ```
-> 읽는 법: 왼손 = 빨강 칼 = 빨강 노트, 오른손 = 파랑 칼 = 파랑 노트예요. 칼 색과 노트 색이 같아야 벨 수 있어요.
 
 ## 2. 칼 (`Saber` · `HitZone`)
 **칼 판정 구간 (실제 길이 비율)**
@@ -89,7 +88,6 @@ pie title 칼 길이 2m 중 판정 구간 비율 (m)
   "MARVELOUS 1.2 ~ 1.5" : 0.3
   "PERFECT 1.5 ~ 2.0" : 0.5
 ```
-> 읽는 법: 조각이 클수록 비율이 커요.
 
 ## 3. 노트 (`Note` · `NoteSpawner`)
 **노트 자리 (플레이어가 정면으로 본 모습, 2줄)**
@@ -146,7 +144,6 @@ flowchart LR
   classDef start fill:#2F8F6B,color:#fff,stroke:#2F8F6B
   classDef io fill:#5A4A9E,color:#fff,stroke:#5A4A9E
 ```
-> 읽는 법: 초록 = 이런 일이 생기면 → 보라 = ✨ 보이는 것 · 🔊 들리는 것이에요.
 
 | 대상 | 이펙트 | 사운드 |
 |---|---|---|
