@@ -29,7 +29,7 @@
 
 **③ 판정 · 점수**
 - 칼에 맞은 위치로 **MARVELOUS / PERFECT / GREAT** 판정, 방향이 틀리면 MISS, 칼을 대고만 있으면 판정 안 함
-- `ScoreSystem`: 첫 Hit +5, 연속 Hit +7, Miss -4 / 0점이 되거나 연속 3 Miss면 GAME OVER (자세한 규칙: `Docs/GameRules.md`)
+- `ScoreSystem`: 첫 Hit +5, 연속 Hit +7, Miss -4 / 0점이 되거나 연속 3 Miss면 GAME OVER (자세한 규칙: `docs/GameRules.md`)
 
 **④ 곡 · 난이도 선택**
 - 곡 선택(`<` `>`), 난이도 Normal / Hard / Expert (악보 + 노트 속도 + 줄 수)
@@ -52,5 +52,5 @@
 ---
 
 ## 📁 문서
-- [`Docs/Proposal/Proposal.md`](Docs/Proposal/Proposal.md) — 기획서 세트(컨셉 · 시스템 · 전투 · 레벨 · 밸런스) · 시뮬레이션
-- [`Docs/GameRules.md`](Docs/GameRules.md) — 판정·점수 규칙 & 진행상황
+- [`docs/Proposal/Proposal.md`](docs/Proposal/Proposal.md) — 기획서 (컨셉 ~ 사업화 · 법무) · [needFix](docs/Proposal/needFix.md)
+- [`docs/GameRules.md`](docs/GameRules.md) — 판정·점수 규칙 & 진행상황
