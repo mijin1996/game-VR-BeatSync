@@ -1,8 +1,8 @@
 # 리소스 (아트 · 사운드 · 곡) 명세 — VR BeatSync
 
-> 문서 세트: [목차](../Index.md) · 기획: [컨셉](../기획/Concept.md) · [시스템](../기획/System.md) · [전투·개체](../기획/Combat_Entity.md) · [레벨 디자인](../기획/LevelDesign.md) · [밸런스](../기획/Balance.md) · 사업·운영: [사업 검토](../대표/Business.md) · [요구사항·로드맵](../기획/Requirements.md) · [Business Model](../기획/Monetization.md) · [서버·데이터](../개발/Server_Data.md) · **리소스** · [로그·지표](../기획/Analytics.md) · [QA·출시](../QA/QA_Release.md) · [라이브 운영](../운영/LiveOps.md) · [사업화·법무](../대표/Business_Legal.md) · [needFix](../needFix.md)
+> 문서 세트: [목차](common_Index.md) · 기획: [컨셉](planning_Concept.md) · [시스템](planning_System.md) · [전투·개체](planning_Combat_Entity.md) · [레벨 디자인](planning_LevelDesign.md) · [밸런스](planning_Balance.md) · 사업·운영: [사업 검토](owner_Business.md) · [요구사항·로드맵](planning_Requirements.md) · [Business Model](planning_Monetization.md) · [서버·데이터](dev_Server_Data.md) · **리소스** · [로그·지표](planning_Analytics.md) · [QA·출시](qa_QA_Release.md) · [라이브 운영](ops_LiveOps.md) · [사업화·법무](owner_Business_Legal.md) · [needFix](common_needFix.md)
 
-> **문서 정보** · 문서 번호 `D09-RES` · 버전 v1.0 · 상태 `Draft` · 담당 아티스트 · 사운드 디자이너 · 최종 수정 2026-11-21 · 관련 문서 [전투·개체](../기획/Combat_Entity.md) · [사업화·법무](../대표/Business_Legal.md)
+> **문서 정보** · 문서 번호 `D09-RES` · 버전 v1.0 · 상태 `Draft` · 담당 아티스트 · 사운드 디자이너 · 최종 수정 2026-11-21 · 관련 문서 [전투·개체](planning_Combat_Entity.md) · [사업화·법무](owner_Business_Legal.md)
 
 **변경 이력**
 
@@ -28,11 +28,11 @@
 | 질문 | 왜 |
 |---|---|
 | 곡 라이선스가 **게임에 넣어 판매**하는 것을 허용하나? | 무료 음원도 "영상 배경음은 되지만 단독 재생 · 판매 상품 포함은 안 됨"인 경우가 있어요 |
-| 작곡가 표기가 필요한가? | 크레딧 화면([REQ_114](../기획/Requirements.md))에 넣기 |
+| 작곡가 표기가 필요한가? | 크레딧 화면([REQ_114](planning_Requirements.md))에 넣기 |
 | Beat Sage로 만든 악보를 상업 게임에 써도 되나? | AI 생성 도구의 이용 조건 · 생성물 권리를 확인해야 해요. 안 되면 악보를 직접 만들거나 수정 |
 | 악보 파일 형식(`.dat`)이 다른 게임 형식인가? | 형식 자체는 데이터 구조라 문제가 적지만, **다른 게임의 이름 · 로고를 게임 안에 쓰지 않기** |
 
-→ [F-03](../needFix.md#8-정할-것)
+→ [F-03](common_needFix.md#8-정할-것)
 
 ## 3. 그 밖의 리소스
 | 리소스 ID | 폴더 | 쓰는 곳 | 출처 | 라이선스 |
@@ -49,10 +49,10 @@
 ## 4. 새로 필요한 리소스
 | 리소스 ID | 종류 | 관련 | 상태 |
 |---|---|---|---|
-| `SONG_005+` | 상업 이용 가능한 곡 (최소 5곡) | [REQ_112](../기획/Requirements.md) | 대기 |
-| `UI_RESULT` | 결과 화면 (CLEAR · 랭크) | [S-02](../needFix.md) | 대기 |
-| `UI_HP_GAUGE` | 체력 게이지 | [S-17](../needFix.md) | 대기 |
-| `UI_CALIB` | 박자 보정 화면 | [S-16](../needFix.md) | 대기 |
-| `UI_SAFETY` | 시작 안전 안내 화면 (주변 공간 · 휴식) | [QA](../QA/QA_Release.md) §4 | 대기 |
-| `FX_COMBO_*` | 콤보 연출 | [S-12](../needFix.md) | 대기 |
-| `STORE_*` | VR 스토어 이미지 · 트레일러 영상 | [QA](../QA/QA_Release.md) §5 | 대기 |
+| `SONG_005+` | 상업 이용 가능한 곡 (최소 5곡) | [REQ_112](planning_Requirements.md) | 대기 |
+| `UI_RESULT` | 결과 화면 (CLEAR · 랭크) | [S-02](common_needFix.md) | 대기 |
+| `UI_HP_GAUGE` | 체력 게이지 | [S-17](common_needFix.md) | 대기 |
+| `UI_CALIB` | 박자 보정 화면 | [S-16](common_needFix.md) | 대기 |
+| `UI_SAFETY` | 시작 안전 안내 화면 (주변 공간 · 휴식) | [QA](qa_QA_Release.md) §4 | 대기 |
+| `FX_COMBO_*` | 콤보 연출 | [S-12](common_needFix.md) | 대기 |
+| `STORE_*` | VR 스토어 이미지 · 트레일러 영상 | [QA](qa_QA_Release.md) §5 | 대기 |
