@@ -1,16 +1,18 @@
 # 레벨 디자인 — 노트 배치 · 곡 · 난이도
 
-> 문서 세트: [목차](common_Index.md) · 기획: [컨셉](planning_Concept.md) · [시스템](planning_System.md) · [전투·개체](planning_Combat_Entity.md) · **레벨 디자인** · [밸런스](planning_Balance.md) · 사업·운영: [사업 검토](owner_Business.md) · [요구사항·로드맵](planning_Requirements.md) · [Business Model](planning_Monetization.md) · [서버·데이터](dev_Server_Data.md) · [리소스](design_Resources.md) · [로그·지표](planning_Analytics.md) · [QA·출시](qa_QA_Release.md) · [라이브 운영](ops_LiveOps.md) · [사업화·법무](owner_Business_Legal.md) · [needFix](common_needFix.md)
-> 데이터: [`Balance/beatmap_stats.json`](planning_Balance/beatmap_stats.json) — 비트맵 JSON 9개를 읽어 계산
+> 문서 세트: [목차](common_Index.md) · 기획: [컨셉](planner_Concept.md) · [시스템](planner_System.md) · [전투·개체](planner_Combat_Entity.md) · **레벨 디자인** · [밸런스](planner_Balance.md) · 사업·운영: [사업 검토](owner_Business.md) · [요구사항·로드맵](planner_Requirements.md) · [Business Model](planner_Monetization.md) · [서버·데이터](developer_Server_Data.md) · [리소스](designer_Resources.md) · [로그·지표](planner_Analytics.md) · [QA·출시](tester_Release.md) · [라이브 운영](operator_LiveOps.md) · [사업화·법무](owner_Legal.md) · [needFix](common_needFix.md)
+> 데이터: [`Balance/beatmap_stats.json`](planner_Balance/beatmap_stats.json) — 비트맵 JSON 9개를 읽어 계산
 
-> **문서 정보** · 문서 번호 `D05-LEVEL` · 버전 v1.0 · 상태 `Review` · 담당 레벨 디자이너 · 최종 수정 2026-11-21 · 관련 문서 [밸런스](planning_Balance.md)
+> **문서 정보**
+
+| 문서 번호 | 버전 | 상태 | 책임자 | 협업 | 최종 수정 | 관련 문서 |
+|---|---|---|---|---|---|---|
+| `D05-LEVEL` | v1.1 | `Review` | 레벨 디자이너 | 밸런스 기획자 | 2026-11-23 | [밸런스](planner_Balance.md) |
 
 **변경 이력**
 
 | 버전 | 날짜 | 변경 내용 | 사유 | 결정자 | 영향 범위 |
 |---|---|---|---|---|---|
-| v0.9 | 2026-11-20 | 기존 문서 (자세한 기록은 git 커밋) | — | 레벨 디자이너 | — |
-| v1.0 | 2026-11-21 | 문서 정보 · 변경 이력 · 문서 번호 추가, 사업 · 운영 문서와 연결 | — | 레벨 디자이너 | 문서만 |
 
 ---
 
@@ -56,10 +58,10 @@ z -2.3   x -1 ~ 1.2  (오른쪽 = +x, 위 = +z)
 | 3 | 바닥 표시 3 | `Plane (1)` | 0, 13.2 |
 | C | 메뉴 캔버스 (월드 공간) | `Canvas` | 0, 13.3 |
 
-노트 생성 지점은 플레이어(XR Origin 바닥 기준) 앞 약 **13.8m**예요. 난이도별 노트 속도로 나누면 이동 시간은 Normal 4.6초 · Hard 2.8초 · Expert 1.7초예요 (머리 위치 · 칼 길이는 빼고 계산, [S-15](common_needFix.md) 참고).
+노트 생성 지점은 플레이어(XR Origin 바닥 기준) 앞 약 **13.8m**임. 난이도별 노트 속도로 나누면 이동 시간은 Normal 4.6초 · Hard 2.8초 · Expert 1.7초임 (머리 위치 · 칼 길이는 빼고 계산, [S-15](common_needFix.md) 참고).
 
 ## 2. 노트 배치 그리드
-원본 악보는 가로 4줄 × 세로 3층. 게임에서는 `LaneMapper`가 가로 4줄을 2줄로 합치고(0 · 1 → 왼쪽, 2 · 3 → 오른쪽), 같은 시간 · 줄 · 층에 겹치는 노트는 하나만 남겨요.
+원본 악보는 가로 4줄 × 세로 3층. 게임에서는 `LaneMapper`가 가로 4줄을 2줄로 합치고(0 · 1 → 왼쪽, 2 · 3 → 오른쪽), 같은 시간 · 줄 · 층에 겹치는 노트는 하나만 남김.
 
 ```
 원본 (4 × 3)                    현재 (2 × 3)

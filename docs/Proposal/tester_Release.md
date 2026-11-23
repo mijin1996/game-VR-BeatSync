@@ -1,19 +1,22 @@
 # QA · 출시 체크리스트 — VR BeatSync
 
-> 문서 세트: [목차](common_Index.md) · 기획: [컨셉](planning_Concept.md) · [시스템](planning_System.md) · [전투·개체](planning_Combat_Entity.md) · [레벨 디자인](planning_LevelDesign.md) · [밸런스](planning_Balance.md) · 사업·운영: [사업 검토](owner_Business.md) · [요구사항·로드맵](planning_Requirements.md) · [Business Model](planning_Monetization.md) · [서버·데이터](dev_Server_Data.md) · [리소스](design_Resources.md) · [로그·지표](planning_Analytics.md) · **QA·출시** · [라이브 운영](ops_LiveOps.md) · [사업화·법무](owner_Business_Legal.md) · [needFix](common_needFix.md)
+> 문서 세트: [목차](common_Index.md) · 기획: [컨셉](planner_Concept.md) · [시스템](planner_System.md) · [전투·개체](planner_Combat_Entity.md) · [레벨 디자인](designer_LevelDesign.md) · [밸런스](planner_Balance.md) · 사업·운영: [사업 검토](owner_Business.md) · [요구사항·로드맵](planner_Requirements.md) · [Business Model](planner_Monetization.md) · [서버·데이터](developer_Server_Data.md) · [리소스](designer_Resources.md) · [로그·지표](planner_Analytics.md) · **QA·출시** · [라이브 운영](operator_LiveOps.md) · [사업화·법무](owner_Legal.md) · [needFix](common_needFix.md)
 
-> **문서 정보** · 문서 번호 `D11-QA` · 버전 v1.0 · 상태 `Draft` · 담당 QA · 최종 수정 2026-11-21 · 관련 문서 [시스템](planning_System.md) · [사업화·법무](owner_Business_Legal.md)
+> **문서 정보**
+
+| 문서 번호 | 버전 | 상태 | 책임자 | 협업 | 최종 수정 | 관련 문서 |
+|---|---|---|---|---|---|---|
+| `D11-QA` | v1.1 | `Draft` | QA 테스터 | 클라이언트 개발자 | 2026-11-23 | [시스템](planner_System.md) · [사업화·법무](owner_Legal.md) |
 
 **변경 이력**
 
 | 버전 | 날짜 | 변경 내용 | 사유 | 결정자 | 영향 범위 |
 |---|---|---|---|---|---|
-| v1.0 | 2026-11-21 | 최초 작성 | — | QA | — |
 
 ---
 
 ## 1. 목적
-**출시해도 되는 상태인지** 판정하는 문서예요. VR은 **편의 · 안전 · 성능**이 스토어 심사와 리뷰를 좌우해요.
+**출시해도 되는 상태인지** 판정하는 문서임. VR은 **편의 · 안전 · 성능**이 스토어 심사와 리뷰를 좌우함.
 
 ## 2. 버그 등급
 | 등급 | 기준 | 출시 조건 |
@@ -56,10 +59,10 @@
 | 연령 등급 · 편의 등급(Comfort rating) | 대기 |
 | 트레일러 영상 · 스크린샷 · 아이콘 | 대기 |
 | 개인정보처리방침 (분석 도구 쓰면) | 대기 |
-| 곡 크레딧 · 라이선스 화면 | 대기 ([REQ_114](planning_Requirements.md)) |
+| 곡 크레딧 · 라이선스 화면 | 대기 ([REQ_114](planner_Requirements.md)) |
 
 ## 6. 출시 판정
 - [ ] 치명 버그 0
 - [ ] VR 편의 · 안전 기준 전부 통과
-- [ ] [리소스](design_Resources.md) §2 곡 · 악보 라이선스 전부 확인
-- [ ] [사업화 · 법무](owner_Business_Legal.md) 전 항목 완료
+- [ ] [리소스](designer_Resources.md) §2 곡 · 악보 라이선스 전부 확인
+- [ ] [사업화 · 법무](owner_Legal.md) 전 항목 완료

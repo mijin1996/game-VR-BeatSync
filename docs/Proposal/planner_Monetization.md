@@ -1,25 +1,28 @@
 # Business Model — VR BeatSync
 
-> 문서 세트: [목차](common_Index.md) · 기획: [컨셉](planning_Concept.md) · [시스템](planning_System.md) · [전투·개체](planning_Combat_Entity.md) · [레벨 디자인](planning_LevelDesign.md) · [밸런스](planning_Balance.md) · 사업·운영: [사업 검토](owner_Business.md) · [요구사항·로드맵](planning_Requirements.md) · **Business Model** · [서버·데이터](dev_Server_Data.md) · [리소스](design_Resources.md) · [로그·지표](planning_Analytics.md) · [QA·출시](qa_QA_Release.md) · [라이브 운영](ops_LiveOps.md) · [사업화·법무](owner_Business_Legal.md) · [needFix](common_needFix.md)
+> 문서 세트: [목차](common_Index.md) · 기획: [컨셉](planner_Concept.md) · [시스템](planner_System.md) · [전투·개체](planner_Combat_Entity.md) · [레벨 디자인](designer_LevelDesign.md) · [밸런스](planner_Balance.md) · 사업·운영: [사업 검토](owner_Business.md) · [요구사항·로드맵](planner_Requirements.md) · **Business Model** · [서버·데이터](developer_Server_Data.md) · [리소스](designer_Resources.md) · [로그·지표](planner_Analytics.md) · [QA·출시](tester_Release.md) · [라이브 운영](operator_LiveOps.md) · [사업화·법무](owner_Legal.md) · [needFix](common_needFix.md)
 
-> **문서 정보** · 문서 번호 `D07-BM` · 버전 v1.0 · 상태 `Draft` · 담당 기획자 · 대표 · 최종 수정 2026-11-21 · 관련 문서 [밸런스](planning_Balance.md) · [서버·데이터](dev_Server_Data.md)
+> **문서 정보**
+
+| 문서 번호 | 버전 | 상태 | 책임자 | 협업 | 최종 수정 | 관련 문서 |
+|---|---|---|---|---|---|---|
+| `D07-BM` | v1.1 | `Draft` | 기획자 | 대표 (승인) | 2026-11-23 | [밸런스](planner_Balance.md) · [서버·데이터](developer_Server_Data.md) |
 
 **변경 이력**
 
 | 버전 | 날짜 | 변경 내용 | 사유 | 결정자 | 영향 범위 |
 |---|---|---|---|---|---|
-| v1.0 | 2026-11-21 | 최초 작성 | — | 기획자 | — |
 
 ---
 
 ## 1. 목적
-**어떻게 돈을 벌지** 정하는 문서예요.
+**어떻게 돈을 벌지** 정하는 문서임.
 > 지금 구현: 수익화 없음. 게임 안 재화 없음 (점수 · 콤보만).
 
 ## 2. Business Model 구조
 | 항목 | 결정 (제안) | 이유 |
 |---|---|---|
-| 주 수익원 | **유료 앱 (프리미엄)** | VR 스토어에서 리듬 게임은 유료 앱이 일반적, VR 안 광고는 몰입을 크게 깨요 |
+| 주 수익원 | **유료 앱 (프리미엄)** | VR 스토어에서 리듬 게임은 유료 앱이 일반적, VR 안 광고는 몰입을 크게 깸 |
 | 추가 수익 | **곡 팩 DLC** (출시 후) | 곡을 비트맵 JSON으로 추가하는 구조라 콘텐츠 판매에 맞음 |
 | 넣지 않는 것 | 광고 · 가챠 · 게임 안 재화 | 몰입 · 공정성, 확률 공개 의무 |
 | 체험판 | 1곡 무료 데모 (선택) | 유료 앱은 구매 전 체험이 환불률을 낮춤 |
@@ -30,7 +33,7 @@
 | `PRD_BASE` | 본편 | ₩9,900 ~ ₩14,900 (경쟁작 가격 조사 후 확정 → [F-04](common_needFix.md)) | 곡 5곡 이상 × 난이도 3종 |
 | `PRD_PACK_001` | 곡 팩 1 (출시 후) | ₩3,300 | 3곡 |
 
-> 가격은 곡 수 · 플레이 시간에 맞춰요. 곡 1곡 × 3난이도를 3번씩 = 약 30분 → 5곡이면 약 2.5시간 분량이에요.
+> 가격은 곡 수 · 플레이 시간에 맞춤. 곡 1곡 × 3난이도를 3번씩 = 약 30분 → 5곡이면 약 2.5시간 분량임.
 
 ## 4. 곡 수급 비용 — 가장 큰 비용
 | 방법 | 장점 | 단점 |
@@ -45,7 +48,7 @@
 
 예) 첫 3개월 판매 500개 × ₩12,900 × (1 − 0.30) × (1 − 0.05) = 약 ₩429만
 ```
-> VR 스토어 수수료는 30%로 가정했어요 (스토어 조건 확인 → [사업화 · 법무](owner_Business_Legal.md)). 판매 수는 가정이에요.
+> VR 스토어 수수료는 30%로 가정했음 (스토어 조건 확인 → [사업화 · 법무](owner_Legal.md)). 판매 수는 가정임.
 
 ## 6. 예외 처리
 | 상황 | 처리 |

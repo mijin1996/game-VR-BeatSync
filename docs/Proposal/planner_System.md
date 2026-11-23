@@ -1,16 +1,18 @@
 # 시스템 — 게임 흐름 · 노트 생성 · 판정 · 점수
 
-> 문서 세트: [목차](common_Index.md) · 기획: [컨셉](planning_Concept.md) · **시스템** · [전투·개체](planning_Combat_Entity.md) · [레벨 디자인](planning_LevelDesign.md) · [밸런스](planning_Balance.md) · 사업·운영: [사업 검토](owner_Business.md) · [요구사항·로드맵](planning_Requirements.md) · [Business Model](planning_Monetization.md) · [서버·데이터](dev_Server_Data.md) · [리소스](design_Resources.md) · [로그·지표](planning_Analytics.md) · [QA·출시](qa_QA_Release.md) · [라이브 운영](ops_LiveOps.md) · [사업화·법무](owner_Business_Legal.md) · [needFix](common_needFix.md)
+> 문서 세트: [목차](common_Index.md) · 기획: [컨셉](planner_Concept.md) · **시스템** · [전투·개체](planner_Combat_Entity.md) · [레벨 디자인](designer_LevelDesign.md) · [밸런스](planner_Balance.md) · 사업·운영: [사업 검토](owner_Business.md) · [요구사항·로드맵](planner_Requirements.md) · [Business Model](planner_Monetization.md) · [서버·데이터](developer_Server_Data.md) · [리소스](designer_Resources.md) · [로그·지표](planner_Analytics.md) · [QA·출시](tester_Release.md) · [라이브 운영](operator_LiveOps.md) · [사업화·법무](owner_Legal.md) · [needFix](common_needFix.md)
 > 관련 코드: `GM.cs` · `MusicPlayer.cs` · `BeatmapParser.cs` · `LaneMapper.cs` · `NoteScheduler.cs` · `NoteSpawner.cs` · `Note.cs` · `Saber.cs` · `HitZone.cs` · `ScoreSystem.cs` · `CountdownView.cs`
 
-> **문서 정보** · 문서 번호 `D03-SYSTEM` · 버전 v1.0 · 상태 `Review` · 담당 기획자 · 클라이언트 개발자 · 최종 수정 2026-11-21 · 관련 문서 [전투·개체](planning_Combat_Entity.md) · [Business Model](planning_Monetization.md)
+> **문서 정보**
+
+| 문서 번호 | 버전 | 상태 | 책임자 | 협업 | 최종 수정 | 관련 문서 |
+|---|---|---|---|---|---|---|
+| `D03-SYSTEM` | v1.1 | `Review` | 기획자 | 클라이언트 개발자 | 2026-11-23 | [전투·개체](planner_Combat_Entity.md) · [Business Model](planner_Monetization.md) |
 
 **변경 이력**
 
 | 버전 | 날짜 | 변경 내용 | 사유 | 결정자 | 영향 범위 |
 |---|---|---|---|---|---|
-| v0.9 | 2026-11-20 | 기존 문서 (자세한 기록은 git 커밋) | — | 기획자 | — |
-| v1.0 | 2026-11-21 | 문서 정보 · 변경 이력 · 문서 번호 추가, 사업 · 운영 문서와 연결 | — | 기획자 | 문서만 |
 
 ---
 
@@ -85,7 +87,7 @@ stateDiagram-v2
   class GameOver fail
 ```
 
-> `GameState.Result`와 3초 뒤 자동 홈 복귀 코드가 있지만, 지금은 어떤 경로로도 `Result`에 가지 않아요 → [S-02](common_needFix.md)
+> `GameState.Result`와 3초 뒤 자동 홈 복귀 코드가 있지만, 지금은 어떤 경로로도 `Result`에 가지 않음 → [S-02](common_needFix.md)
 
 | 상태 | 음악 | 노트 | 화면에 있는 것 |
 |---|---|---|---|
@@ -131,7 +133,7 @@ flowchart TD
   classDef endc fill:#6B7280,color:#fff,stroke:#6B7280
 ```
 
-> 세부 조건(코드 기준)은 [부록 A-1](#a-1-게임-시작-playroutine)에 있어요.
+> 세부 조건(코드 기준)은 [부록 A-1](#a-1-게임-시작-playroutine)에 있음.
 
 ### 2-2. 노트 생성 `NoteScheduler.Tick()`
 
@@ -176,7 +178,7 @@ travel = distance / speed   (Normal 3 · Hard 5 · Expert 8)
 spawn  = note time - travel (오디오 시계 dspTime 기준)
 ```
 
-> 세부 조건(코드 기준)은 [부록 A-2](#a-2-노트-생성-noteschedulertick)에 있어요.
+> 세부 조건(코드 기준)은 [부록 A-2](#a-2-노트-생성-noteschedulertick)에 있음.
 
 ### 2-3. 베기 판정 (`Saber` → `HitZone` → `Note`)
 
@@ -229,7 +231,7 @@ flowchart TD
 화살표 방향(180도)으로 휘두르면 맞음 · 옆으로(90도)나 반대로 휘두르면 MISS
 ```
 
-> 세부 조건(코드 기준)은 [부록 A-3](#a-3-베기-판정-saber--hitzone--note)에 있어요.
+> 세부 조건(코드 기준)은 [부록 A-3](#a-3-베기-판정-saber--hitzone--note)에 있음.
 
 ### 2-4. 점수 `ScoreSystem.Register()`
 
@@ -267,7 +269,7 @@ flowchart TD
   classDef endc fill:#6B7280,color:#fff,stroke:#6B7280
 ```
 
-> 세부 조건(코드 기준)은 [부록 A-4](#a-4-점수-scoresystemregister)에 있어요.
+> 세부 조건(코드 기준)은 [부록 A-4](#a-4-점수-scoresystemregister)에 있음.
 
 ## 3. 예외 처리 (Edge Case) — 현재 동작
 **[구성도] 예외 처리 지도**
@@ -343,7 +345,7 @@ gantt
 ---
 
 ## 부록 A. 세부 조건 (코드 기준)
-본문 흐름도의 조건을 코드 그대로 적은 개발 참고용이에요. 기획 내용은 본문에 있어요.
+본문 흐름도의 조건을 코드 그대로 적은 개발 참고용임. 기획 내용은 본문에 있음.
 
 ### A-1. 게임 시작 `PlayRoutine()`
 ```

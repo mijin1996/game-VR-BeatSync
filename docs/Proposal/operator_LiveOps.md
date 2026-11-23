@@ -1,19 +1,22 @@
 # 라이브 운영 — VR BeatSync
 
-> 문서 세트: [목차](common_Index.md) · 기획: [컨셉](planning_Concept.md) · [시스템](planning_System.md) · [전투·개체](planning_Combat_Entity.md) · [레벨 디자인](planning_LevelDesign.md) · [밸런스](planning_Balance.md) · 사업·운영: [사업 검토](owner_Business.md) · [요구사항·로드맵](planning_Requirements.md) · [Business Model](planning_Monetization.md) · [서버·데이터](dev_Server_Data.md) · [리소스](design_Resources.md) · [로그·지표](planning_Analytics.md) · [QA·출시](qa_QA_Release.md) · **라이브 운영** · [사업화·법무](owner_Business_Legal.md) · [needFix](common_needFix.md)
+> 문서 세트: [목차](common_Index.md) · 기획: [컨셉](planner_Concept.md) · [시스템](planner_System.md) · [전투·개체](planner_Combat_Entity.md) · [레벨 디자인](designer_LevelDesign.md) · [밸런스](planner_Balance.md) · 사업·운영: [사업 검토](owner_Business.md) · [요구사항·로드맵](planner_Requirements.md) · [Business Model](planner_Monetization.md) · [서버·데이터](developer_Server_Data.md) · [리소스](designer_Resources.md) · [로그·지표](planner_Analytics.md) · [QA·출시](tester_Release.md) · **라이브 운영** · [사업화·법무](owner_Legal.md) · [needFix](common_needFix.md)
 
-> **문서 정보** · 문서 번호 `D12-LIVE` · 버전 v1.0 · 상태 `Draft` · 담당 운영 담당 · 최종 수정 2026-11-21 · 관련 문서 [로그·지표](planning_Analytics.md)
+> **문서 정보**
+
+| 문서 번호 | 버전 | 상태 | 책임자 | 협업 | 최종 수정 | 관련 문서 |
+|---|---|---|---|---|---|---|
+| `D12-LIVE` | v1.1 | `Draft` | 운영 매니저 | 기획자 | 2026-11-23 | [로그·지표](planner_Analytics.md) |
 
 **변경 이력**
 
 | 버전 | 날짜 | 변경 내용 | 사유 | 결정자 | 영향 범위 |
 |---|---|---|---|---|---|
-| v1.0 | 2026-11-21 | 최초 작성 | — | 운영 담당 | — |
 
 ---
 
 ## 1. 목적
-출시 후 **게임을 어떻게 유지하고 키울지** 정하는 문서예요. 유료 VR 리듬 게임 · 1인 운영 기준이에요.
+출시 후 **게임을 어떻게 유지하고 키울지** 정하는 문서임. 유료 VR 리듬 게임 · 1인 운영 기준임.
 
 ## 2. 업데이트 주기 (제안)
 | 종류 | 주기 | 내용 |
@@ -33,10 +36,10 @@
 ## 4. 곡 추가 절차
 | 단계 | 할 일 | 확인 |
 |---|---|---|
-| 1 | 곡 확보 | [리소스](design_Resources.md) §2 라이선스 표에 추가 · 원문 저장 |
-| 2 | 악보 3난이도 | 초당 노트 수 기준 ([밸런스](planning_Balance.md)) |
+| 1 | 곡 확보 | [리소스](designer_Resources.md) §2 라이선스 표에 추가 · 원문 저장 |
+| 2 | 악보 3난이도 | 초당 노트 수 기준 ([밸런스](planner_Balance.md)) |
 | 3 | 곡 ID · 데이터 | `SONG_###`, ScriptableObject · 비트맵 JSON |
-| 4 | 테스트 | 실제 헤드셋 [TC_008](qa_QA_Release.md) · [TC_009](qa_QA_Release.md) |
+| 4 | 테스트 | 실제 헤드셋 [TC_008](tester_Release.md) · [TC_009](tester_Release.md) |
 | 5 | 크레딧 | 작곡가 표기 |
 
 ## 5. 패치노트 양식
@@ -49,8 +52,8 @@
 ## 6. CS 처리
 | 문의 | 처리 | 기한 |
 |---|---|---|
-| 박자가 안 맞아요 | 박자 보정 화면 안내 ([REQ_107](planning_Requirements.md)) | 24시간 |
-| 어지러워요 | 앉아서 모드 · 휴식 안내, 기기 · 프레임 정보 받기 | 24시간 |
+| 박자가 안 맞음 | 박자 보정 화면 안내 ([REQ_107](planner_Requirements.md)) | 24시간 |
+| 어지러움 | 앉아서 모드 · 휴식 안내, 기기 · 프레임 정보 받기 | 24시간 |
 | 환불 | 스토어 환불 정책 안내 | 24시간 |
 
 ## 7. 장애 대응
